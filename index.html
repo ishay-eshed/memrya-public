@@ -26,9 +26,10 @@
   <meta name="twitter:image:alt" content="MEMRYA | Connected memory for your conversations">
   <link rel="canonical" href="https://memrya.co/">
   <link rel="icon" href="./assets/icon.png">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=r8">
   <link rel="stylesheet" href="./site-depth.css">
   <link rel="stylesheet" href="./film.css">
+  <script src="./hero-intro.js"></script>
   <title>MEMRYA | Connected memory for your conversations</title>
 </head>
 <body class="home-page mx-home">  <a class="skip-link" href="#main">Skip to content</a>
@@ -58,10 +59,15 @@
     </div>
   </header>
   <main id="main">
-    <section class="mx-hero" id="top" aria-labelledby="hero-title">
+    <section class="mx-intro" id="top" aria-labelledby="hero-title">
+      <div class="shell mx-intro-stage">
+        <h1 id="hero-title" class="mx-intro-title"><span class="mx-intro-line" data-i18n="hero.title1">Life happens.</span> <span class="mx-intro-line mx-intro-line-strong" data-i18n="hero.title2">MEMRYA remembers.</span></h1>
+      </div>
+      <a class="mx-intro-next" href="#discover" aria-label="Discover MEMRYA" data-i18n-attr="aria-label:hero.next"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M12 4v15m-6-6 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </section>
+    <section class="mx-hero mx-discover" id="discover">
       <div class="shell mx-hero-grid">
         <div class="mx-hero-copy">
-          <h1 id="hero-title"><span data-i18n="hero.title1">Every conversation</span> <span class="mx-accent" data-i18n="hero.title2">becomes part of your memory</span></h1>
           <p class="mx-hero-sub" data-i18n="home2.heroSub">MEMRYA links the people, decisions and tasks across your conversations, then answers your questions with the sources attached</p>
           <div class="mx-hero-actions">
             <a class="mx-btn mx-btn-primary" href="#story" data-i18n="home2.ctaDemo">See how it works</a>
@@ -363,7 +369,7 @@
     </div>
     <div class="shell footer-bottom"><p data-i18n="footer.copyright">© 2026 MEMRYA</p><label class="locale-switch footer-locale"><span class="sr-only" data-i18n="langswitch.label">Language</span><select class="locale-switch-control" aria-label="Language"></select></label></div>
   </footer>
-  <script src="./i18n.js" defer></script>
+  <script src="./i18n.js?v=r8" defer></script>
   <script src="./script.js" defer></script>
   <script src="./site-depth.js" defer></script>
   <script src="./home-locale.js" defer></script>
