@@ -25,8 +25,8 @@ window.MEMRYA_I18N = (() => {
 
       // hero
       'hero.eyebrow': 'Conversations, connected',
-      'hero.title1': 'Life happens.',
-      'hero.title2': 'MEMRYA remembers.',
+      'hero.title1': 'Life happens',
+      'hero.title2': 'MEMRYA remembers',
       'hero.next': 'Discover MEMRYA',
       'hero.lede': 'Record a conversation once. MEMRYA keeps track of the people, decisions, commitments and unfinished tasks that matter, so you can find them again later.',
       "hero.cta": "Contact MEMRYA",
@@ -269,8 +269,8 @@ window.MEMRYA_I18N = (() => {
 
       // hero
       "hero.eyebrow": "محادثاتك في ذاكرة مترابطة",
-      "hero.title1": "الحياة تمضي.",
-      "hero.title2": "MEMRYA تتذكّر.",
+      "hero.title1": "الحياة تمضي",
+      "hero.title2": "MEMRYA تتذكّر",
       "hero.next": "اكتشف MEMRYA",
       "hero.lede": "سجّل المحادثة مرة واحدة. تساعدك MEMRYA على تذكّر الأشخاص والقرارات والالتزامات والمهام التي لم تكتمل، حتى تعود إليها وقت الحاجة.",
       "hero.cta": "تواصل مع MEMRYA",
@@ -512,8 +512,8 @@ window.MEMRYA_I18N = (() => {
 
       // hero
       "hero.eyebrow": "Conversaciones conectadas",
-      "hero.title1": "La vida pasa.",
-      "hero.title2": "MEMRYA recuerda.",
+      "hero.title1": "La vida pasa",
+      "hero.title2": "MEMRYA recuerda",
       "hero.next": "Descubre MEMRYA",
       "hero.lede": "Graba una conversación una sola vez. MEMRYA conserva las personas, decisiones, compromisos y tareas pendientes para que puedas consultarlos cuando los necesites.",
       "hero.cta": "Contactar con MEMRYA",
@@ -756,8 +756,8 @@ window.MEMRYA_I18N = (() => {
 
       // hero
       "hero.eyebrow": "Vos conversations, reliées",
-      "hero.title1": "La vie passe.",
-      "hero.title2": "MEMRYA se souvient.",
+      "hero.title1": "La vie passe",
+      "hero.title2": "MEMRYA se souvient",
       "hero.next": "Découvrir MEMRYA",
       "hero.lede": "Enregistrez une conversation une seule fois. MEMRYA garde les personnes, décisions, engagements et tâches en cours à portée de main pour les retrouver plus tard.",
       "hero.cta": "Contacter MEMRYA",
@@ -1000,8 +1000,8 @@ window.MEMRYA_I18N = (() => {
 
       // hero
       "hero.eyebrow": "Gespräche, die Zusammenhänge schaffen",
-      "hero.title1": "Das Leben passiert.",
-      "hero.title2": "MEMRYA erinnert sich.",
+      "hero.title1": "Das Leben passiert",
+      "hero.title2": "MEMRYA erinnert sich",
       "hero.next": "MEMRYA entdecken",
       "hero.lede": "Nimm ein Gespräch einmal auf. MEMRYA hält Menschen, Entscheidungen, Zusagen und offene Aufgaben fest, damit du sie später schnell wiederfindest.",
       "hero.cta": "MEMRYA kontaktieren",
@@ -1244,8 +1244,8 @@ window.MEMRYA_I18N = (() => {
 
       // hero
       "hero.eyebrow": "Conversas com contexto",
-      "hero.title1": "A vida acontece.",
-      "hero.title2": "A MEMRYA lembra.",
+      "hero.title1": "A vida acontece",
+      "hero.title2": "A MEMRYA lembra",
       "hero.next": "Conheça a MEMRYA",
       "hero.lede": "Grave a conversa uma vez. A MEMRYA guarda pessoas, decisões, compromissos e tarefas pendentes para que possa encontrá-los quando precisar.",
       "hero.cta": "Contactar a MEMRYA",
@@ -1488,8 +1488,8 @@ window.MEMRYA_I18N = (() => {
 
       // hero
       "hero.eyebrow": "Conversazioni collegate",
-      "hero.title1": "La vita scorre.",
-      "hero.title2": "MEMRYA ricorda.",
+      "hero.title1": "La vita scorre",
+      "hero.title2": "MEMRYA ricorda",
       "hero.next": "Scopri MEMRYA",
       "hero.lede": "Registra una conversazione una sola volta. MEMRYA conserva persone, decisioni, impegni e attività in sospeso, così potrai ritrovarli quando ti servono.",
       "hero.cta": "Contatta MEMRYA",

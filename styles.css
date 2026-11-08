@@ -381,22 +381,22 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button,sel
 
 .mx-intro{--mx-header-h:77px;position:relative;isolation:isolate;display:grid;align-items:center;min-height:calc(100vh - var(--mx-header-h));min-height:calc(100svh - var(--mx-header-h));padding:clamp(32px,7vh,80px) 0 calc(clamp(84px,13vh,128px) + env(safe-area-inset-bottom));overflow:hidden;color:#fbfaff;background:radial-gradient(70% 55% at 50% 44%,#1f1d4580,#1f1d4500 72%),linear-gradient(#0f1024,#15162a)}
 .mx-intro-stage{text-align:center}
-.mx-intro-title{margin:0 auto;font-family:var(--display);font-size:clamp(46px,7.6vw,7rem);font-weight:600;line-height:1.02;letter-spacing:-.04em;text-wrap:balance;font-kerning:normal}
+.mx-intro-title{margin:0 auto;font-family:var(--display);font-size:clamp(46px,7.2vw,6rem);font-weight:600;line-height:.98;letter-spacing:-.035em;text-wrap:balance;font-kerning:normal}
 .mx-intro-line{display:block}
 .mx-intro-line:first-child{color:#b6b1dc;font-weight:400}
-.mx-intro-line-strong{margin-top:.04em;color:#fbfaff}
-[dir="rtl"] .mx-intro-title{letter-spacing:0;line-height:1.18}
+.mx-intro-line-strong{margin-top:.06em;color:#fbfaff}
+[dir="rtl"] .mx-intro-title{letter-spacing:0;line-height:1.14}
 .mx-intro-word{display:inline-block;white-space:nowrap}
 .mx-intro-unit{display:inline-block}
 html.mx-intro-pending .mx-intro-title{opacity:0;animation:mx-intro-failsafe 1ms 1.8s forwards}
 .mx-intro-title.is-revealing .mx-intro-unit{animation:mx-intro-rise .6s cubic-bezier(.16,1,.3,1) var(--mx-intro-delay,0ms) both}
 @keyframes mx-intro-rise{from{opacity:0;transform:translate3d(0,.36em,0)}to{opacity:1;transform:none}}
 @keyframes mx-intro-failsafe{to{opacity:1}}
-.mx-intro-next{position:absolute;left:50%;bottom:calc(clamp(20px,4vh,40px) + env(safe-area-inset-bottom));display:grid;place-items:center;width:48px;height:48px;margin-left:-24px;border:1px solid #ffffff2b;border-radius:50%;color:#d9d6f0;animation:mx-intro-fade .6s ease-out .9s both;transition:border-color .2s ease,color .2s ease}
+.mx-intro-next{position:absolute;left:50%;bottom:calc(clamp(20px,4vh,40px) + env(safe-area-inset-bottom));display:grid;place-items:center;width:48px;height:48px;margin-left:-24px;border:1px solid #ffffff2b;border-radius:50%;color:#d9d6f0;animation:mx-intro-fade .6s ease-out .9s backwards;transition:border-color .2s ease,color .2s ease}
 .mx-intro-next:hover{border-color:#ffffff73;color:#fff}
 .mx-intro-next:focus-visible{outline:2px solid #cbc6ea;outline-offset:4px}
 @keyframes mx-intro-fade{from{opacity:0}to{opacity:1}}
-.mx-home .mx-discover{padding-top:clamp(56px,9vw,120px)}
+.mx-home .mx-discover{padding-top:0}
 .mx-home .mx-discover .mx-hero-sub{font-size:clamp(19px,1.9vw,23px);line-height:1.5;color:#e4e3f2;max-width:30em}
 .mx-home .site-header{transition:background-color .28s ease,border-color .28s ease}
 .mx-home .brand,.mx-home .nav-links,.mx-home .nav-cta,.mx-home .locale-switch select,.mx-home .nav-toggle span{transition:opacity .28s ease,color .28s ease,background-color .28s ease,border-color .28s ease}
@@ -415,11 +415,55 @@ html.mx-intro-at-top .mx-home .site-header:focus-within .nav-links a:after{backg
 }
 @media(max-width:620px){
 .mx-intro{--mx-header-h:69px}
-.mx-intro-title{font-size:clamp(44px,13vw,60px);line-height:1.04}
+.mx-intro-title{font-size:clamp(42px,13.4vw,60px);line-height:.94;letter-spacing:-.03em}
+.mx-intro-line:first-child{font-size:.66em;line-height:1.1;letter-spacing:-.02em;margin-bottom:.16em}
+[dir="rtl"] .mx-intro-title{line-height:1.12}
+[dir="rtl"] .mx-intro-line:first-child{line-height:1.3}
 .mx-intro-next{width:44px;height:44px;margin-left:-22px}
-.mx-home .mx-discover{padding-top:48px}
+.mx-home .mx-discover{padding-top:0}
 .mx-home .mx-discover .mx-hero-sub{font-size:18px}
 }
 @media(prefers-reduced-motion:reduce){
 html.mx-intro-pending .mx-intro-title{opacity:1}
 }
+
+/* #discover story: four phrases share one centered position inside a sticky stage; JS scrubs each phrase in and out from scroll position. Without JS or with reduced motion all four stay readable, stacked. */
+.mx-manifesto-scene{--mx-header-h:77px;position:relative}
+.mx-manifesto-stage{display:grid;place-items:center;padding:clamp(64px,12vh,128px) 0 clamp(56px,10vh,112px)}
+.mx-manifesto{margin:0;font-family:var(--display);font-size:clamp(46px,6.6vw,5.5rem);font-weight:500;line-height:1.08;letter-spacing:-.032em;text-align:center;font-kerning:normal}
+.mx-manifesto-line{display:block;text-wrap:balance}
+.mx-manifesto-line:nth-child(1){color:#b1e9d0}
+.mx-manifesto-line:nth-child(2){color:#ffc2a8}
+.mx-manifesto-line:nth-child(3){color:#adcfff}
+.mx-manifesto-line-whole{margin-top:.22em;color:#fdfbf7;font-size:1.09em;font-weight:650;letter-spacing:-.036em}
+[dir="rtl"] .mx-manifesto,[dir="rtl"] .mx-manifesto-line-whole{letter-spacing:0;line-height:1.3}
+.mx-manifesto-scene.is-kinetic{height:270vh;height:270svh}
+.mx-manifesto-scene.is-kinetic .mx-manifesto-stage{position:sticky;top:var(--mx-header-h);height:calc(100vh - var(--mx-header-h));height:calc(100svh - var(--mx-header-h));padding:0;box-sizing:border-box;overflow:hidden}
+.mx-manifesto-scene.is-kinetic .mx-manifesto{display:grid;width:100%;place-items:center}
+.mx-manifesto-scene.is-kinetic .mx-manifesto-line{grid-area:1/1;margin:0;max-width:11em;opacity:0;will-change:transform,opacity;backface-visibility:hidden}
+@media(max-width:620px){
+.mx-manifesto-scene{--mx-header-h:69px}
+.mx-manifesto{font-size:clamp(40px,12.4vw,58px);line-height:1.08}
+.mx-manifesto-scene.is-kinetic .mx-manifesto-line{max-width:8.2em}
+}
+.mx-home .mx-discover{overflow:visible}
+@supports(overflow:clip){.mx-home .mx-discover{overflow:clip}}
+/* While the story scene sits under the header, the header carries the same navy as the intro so the page reads as one dark passage; the Contact pill turns to a quiet ivory outline instead of a black pill. */
+html.mx-story-active .mx-home .site-header{background:#15162a;border-bottom-color:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+html.mx-story-active .mx-home .brand{color:#f3f2fb}
+html.mx-story-active .mx-home .brand img{box-shadow:none}
+html.mx-story-active .mx-home .locale-switch select{background:transparent;border-color:#ffffff2b;color:#e4e2f4}
+html.mx-story-active .mx-home .locale-switch option{color:#171c20;background:#fff}
+html.mx-story-active .mx-home .nav-toggle{color:#e4e2f4}
+html.mx-story-active .mx-home .nav-toggle span{background:#e4e2f4}
+html.mx-story-active .mx-home .nav-actions .nav-cta{background:transparent;color:#f3f2fb;box-shadow:inset 0 0 0 1px #ffffff40}
+html.mx-story-active .mx-home .nav-actions .nav-cta:hover{box-shadow:inset 0 0 0 1px #ffffff80}
+html.mx-story-active .mx-home .site-header :focus-visible{outline-color:#cbc6ea}
+@media(min-width:1081px){
+html.mx-story-active .mx-home .nav-links{color:#d9d6f0}
+html.mx-story-active .mx-home .nav-links a:after{background:#d9d6f0}
+}
+.mx-home .mx-discover .mx-manifesto-scene+.mx-hero-grid{padding-top:56px}
+/* R11 editorial no-CTA during cinematic story. Keep focus access for keyboard and open menu. */
+html.mx-story-active .mx-home .nav>.nav-actions .nav-cta{opacity:0;pointer-events:none}
+html.mx-story-active .mx-home .site-header:focus-within .nav>.nav-actions .nav-cta{opacity:1;pointer-events:auto}
