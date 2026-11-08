@@ -447,11 +447,11 @@ html.mx-intro-pending .mx-intro-title{opacity:1}
 .mx-thread-1{stroke:#b1e9d0a6}
 .mx-thread-2{stroke:#ffc2a8a6}
 .mx-thread-3{stroke:#adcfffa6}
-.mx-node{position:absolute;top:0;width:7px;height:7px;margin:-3.5px 0 0 -3.5px;border-radius:50%}
-.mx-node-1{left:16.667%;background:#b1e9d0}
-.mx-node-2{left:50%;background:#ffc2a8}
-.mx-node-3{left:83.333%;background:#adcfff}
-.mx-node-whole{top:100%;left:50%;width:11px;height:11px;margin:-5.5px 0 0 -5.5px;background:#fdfbf7;box-shadow:0 0 0 5px #fdfbf714}
+.mx-manifesto .mx-node{position:absolute;top:0;display:block;width:7px;height:7px;min-width:0;max-width:none;margin:-3.5px 0 0 -3.5px;padding:0;border:0;border-radius:50%;box-shadow:none}
+.mx-manifesto .mx-node-1{left:16.667%;background:#b1e9d0}
+.mx-manifesto .mx-node-2{left:50%;background:#ffc2a8}
+.mx-manifesto .mx-node-3{left:83.333%;background:#adcfff}
+.mx-manifesto .mx-node-whole{top:100%;left:50%;width:11px;height:11px;margin:-5.5px 0 0 -5.5px;background:#fdfbf7;box-shadow:0 0 0 5px #fdfbf714}
 /* Choreography (JS-armed only): phrases unmask 0-0.85s, their nodes land, threads draw 0.5-1.35s, the meeting node lands, then "All connected" opens from its centre 1.2-1.85s. */
 .mx-manifesto-scene.is-armed .mx-manifesto-line{clip-path:inset(0 0 100% 0);transform:translate3d(0,.45em,0)}
 .mx-manifesto-scene.is-armed .mx-manifesto-line-whole{clip-path:inset(-.2em 50% -.2em 50%);transform:none;opacity:.2}
