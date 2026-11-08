@@ -124,36 +124,38 @@
   else start();
 })();
 
-/* #discover story: the four phrases scroll in normal page flow. Each frame, every phrase is nudged by its own distance from the viewport centre: fully opaque and settled near the centre, a little lower and softer below it, a little higher above it. It never reads or sets the scroll position, and a phrase never drops below MIN_OPACITY, so a fast flick past the story still shows it. Without JS or with reduced motion the four phrases are simply shown. */
+/* #discover story: the four phrases sit together in normal page flow. When the block first enters view they rise in once with a short CSS stagger; nothing is tied to scroll position after that. Scroll is read only to keep the header navy over the dark band. Without JS, without IntersectionObserver or with reduced motion the phrases are simply shown. */
 (() => {
   'use strict';
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const SHIFT_PX = 16;
-  const MIN_OPACITY = 0.32;
-  const CALM = 0.2; // share of half the viewport around the centre where a phrase sits fully settled
   const clamp = (value) => Math.min(1, Math.max(0, value));
-  const easeIn = (t) => t * t;
 
   function start() {
     const scene = document.querySelector('[data-mx-manifesto]');
     if (!scene) return;
     const darkBand = scene.closest('.mx-discover') || scene;
-    const lines = [...scene.querySelectorAll('.mx-manifesto-line')];
     const arrow = document.querySelector('.mx-intro-next');
     const root = document.documentElement;
     let frame = 0;
     let dark = null;
     let metrics = null;
-    let kinetic = false;
 
-    // Layout is read only after resize, load or locale change (with the nudges removed); scrolling itself reads scrollY alone.
+    if (!reducedMotion.matches && 'IntersectionObserver' in window) {
+      scene.classList.add('is-armed');
+      const observer = new IntersectionObserver((entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        observer.disconnect();
+        scene.classList.add('is-in');
+      }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
+      observer.observe(scene);
+    }
+    reducedMotion.addEventListener?.('change', () => scene.classList.add('is-in'));
+
     function measure() {
-      if (kinetic) lines.forEach((line) => { line.style.transform = ''; });
       const y = window.scrollY;
       metrics = {
         top: scene.getBoundingClientRect().top + y,
         bottom: darkBand.getBoundingClientRect().bottom + y,
-        centres: lines.map((line) => { const box = line.getBoundingClientRect(); return box.top + y + box.height / 2; }),
         header: parseFloat(getComputedStyle(scene).getPropertyValue('--mx-header-h')) || 0,
         vh: window.innerHeight,
       };
@@ -167,41 +169,20 @@
       const edge = y + metrics.header;
       const overStory = edge > metrics.top + 1 && edge < metrics.bottom - 1;
       if (overStory !== dark) { dark = overStory; root.classList.toggle('mx-story-active', overStory); }
-      if (!kinetic) return;
-      if (arrow) {
+      if (arrow && !reducedMotion.matches) {
         const fade = clamp(1 - y / (metrics.vh * 0.28));
         arrow.style.opacity = fade < 1 ? fade.toFixed(3) : '';
         arrow.style.visibility = fade <= 0.01 ? 'hidden' : '';
       }
-      const half = metrics.vh / 2;
-      const centre = y + metrics.header / 2 + half;
-      lines.forEach((line, index) => {
-        const distance = (metrics.centres[index] - centre) / half;
-        const away = easeIn(clamp((Math.abs(distance) - CALM) / (1 - CALM)));
-        const offset = Math.sign(distance) * SHIFT_PX * away;
-        line.style.opacity = away > 0 ? (1 - (1 - MIN_OPACITY) * away).toFixed(3) : '';
-        line.style.transform = away > 0 ? 'translate3d(0,' + offset.toFixed(2) + 'px,0)' : '';
-      });
     }
     const request = () => { if (!frame) frame = requestAnimationFrame(render); };
     const refresh = () => { metrics = null; request(); };
-
-    function setMode() {
-      kinetic = !reducedMotion.matches;
-      scene.classList.toggle('is-kinetic', kinetic);
-      if (!kinetic) {
-        lines.forEach((line) => { line.style.transform = ''; line.style.opacity = ''; });
-        if (arrow) { arrow.style.opacity = ''; arrow.style.visibility = ''; }
-      }
-      refresh();
-    }
     window.addEventListener('scroll', request, { passive: true });
     window.addEventListener('resize', refresh, { passive: true });
     window.addEventListener('load', refresh);
     document.addEventListener('memrya:locale-changed', refresh);
     document.fonts?.ready.then(refresh);
-    reducedMotion.addEventListener?.('change', setMode);
-    setMode();
+    refresh();
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
