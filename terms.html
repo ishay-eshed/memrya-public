@@ -1,50 +1,130 @@
-<!doctype html>
-<html lang="en">
+﻿<!doctype html>
+<html lang="en" dir="ltr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,follow">
-<meta name="description" content="MEMRYA's terms for access, conversations, AI and optional calendar integrations.">
-<title>Terms of service | MEMRYA</title>
-<link rel="canonical" href="https://memrya.co/terms.html">
-<style>
-:root{color-scheme:light;--ink:#1b2230;--muted:#535e6c;--line:#d8dee8;--surface:#fff;--bg:#f5f7fa;--link:#2449ad}
-*{box-sizing:border-box}html{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px}
-body{margin:0;background:var(--bg);color:var(--ink);line-height:1.72}
-a{color:var(--link)}a:focus-visible{outline:3px solid #5479da;outline-offset:3px}
-header,main,footer{max-width:850px;margin:auto;padding:24px}
-header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:16px;flex-wrap:wrap}
-.logo{text-decoration:none;font-weight:850;letter-spacing:.13em;color:var(--ink);font-size:1.16rem}
-nav{display:flex;gap:18px;flex-wrap:wrap;font-size:.94rem}
-main{margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,5vw,46px)}
-h1{font-size:clamp(2rem,5vw,2.7rem);line-height:1.2;margin:0 0 16px;letter-spacing:-.025em}
-h2{font-size:1.25rem;margin:34px 0 9px}
-p,li{max-width:75ch}p{margin:0 0 13px}.muted{color:var(--muted)}ul{padding-left:24px}
-footer{font-size:.86rem;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;display:flex;gap:15px;justify-content:space-between;flex-wrap:wrap}
-@media(max-width:600px){header,main,footer{padding:19px}main{border-radius:0;border-left:0;border-right:0}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#e7e3da">
+  <meta name="description" content="Terms that govern use of MEMRYA and this website.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:title" content="Terms | MEMRYA">
+  <meta property="og:description" content="Terms that govern use of MEMRYA and this website.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MEMRYA">
+  <meta property="og:url" content="https://memrya.co/terms.html">
+  <meta property="og:image" content="https://memrya.co/assets/og-memrya-v4.png">
+  <meta property="og:image:secure_url" content="https://memrya.co/assets/og-memrya-v4.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="MEMRYA | Connected memory for your conversations.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terms | MEMRYA">
+  <meta name="twitter:description" content="Terms that govern use of MEMRYA and this website.">
+  <meta name="twitter:image" content="https://memrya.co/assets/og-memrya-v4.png">
+  <meta name="twitter:image:alt" content="MEMRYA | Connected memory for your conversations.">
+  <link rel="canonical" href="https://memrya.co/terms.html">
+  <link rel="icon" href="./assets/icon.png">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./site-depth.css">
+  <title>Terms | MEMRYA</title>
 </head>
 <body>
-<header><a class="logo" href="/">MEMRYA</a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/support.html">Support</a></nav></header>
-<main><h1>Terms of service</h1><p class="muted">Last updated: November 4, 2026 &middot; Contact: <a href="mailto:dev@memrya.co">dev@memrya.co</a></p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-glow page-glow-a" aria-hidden="true"></div>
+  <div class="page-glow page-glow-b" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="nav shell">
+      <a class="brand" href="./index.html#top" aria-label="MEMRYA home">
+        <img src="./assets/icon.png" alt="">
+        <span>MEMRYA</span>
+      </a>
+      <nav class="nav-links depth-nav" id="primary-nav" aria-label="Primary navigation">
+  <a href="./product.html" data-i18n="depth.nav.product">Product</a>
+  <a href="./use-cases.html" data-i18n="depth.nav.use">Use cases</a>
+  <a href="./integrations.html" data-i18n="depth.nav.integrations">Integrations</a>
+  <a href="./security.html" data-i18n="depth.nav.trust">Security</a>
+  <a href="./pricing.html" data-i18n="nav.pricing">Pricing</a>
+</nav>
+      <div class="nav-actions">
+        <label class="locale-switch">
+          <span class="sr-only" data-i18n="langswitch.label">Language</span>
+          <select id="locale-switch" aria-label="Language"></select>
+        </label>
+        <a class="ghost-link" href="mailto:dev@memrya.co" data-i18n="nav.contact">Contact</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="utility-main">
+    <div class="shell">
+      <div class="utility-hero reveal">
+        <span class="eyebrow" data-i18n="page.terms.title">Terms</span>
+        <h1 data-i18n="page.terms.title">Terms</h1>
+        <p data-i18n="page.terms.intro">Terms that govern use of MEMRYA and this website.</p>
+      </div>
+      <div class="utility-grid">
+        <aside class="utility-aside reveal">
+          <p>Last updated: October 2026.</p>
+          <p>These terms apply to use of MEMRYA and this website.</p>
+          <p>Contact: <a href="mailto:dev@memrya.co">dev@memrya.co</a></p>
+        </aside>
+        <div class="utility-content reveal">
+          <div class="notice">These terms govern use of MEMRYA and this website. By using MEMRYA, you agree to use the service lawfully and in accordance with these terms.</div>
 
-<p>These terms apply to use of the MEMRYA app and this website. MEMRYA is in limited testing; features may change or be unavailable by account or app version.</p>
-<h2>Using MEMRYA lawfully</h2>
-<p>You are responsible for complying with applicable recording and privacy laws and obtaining consent from participants when required. Do not record, upload or share another person's conversation without the necessary rights or permissions.</p>
-<h2>Service capabilities and AI</h2>
-<p>MEMRYA can record, import, transcribe and analyze conversations and organize the results. Transcription, speaker identification, summaries, extracted dates and AI suggestions can be inaccurate. Review important information yourself before acting on it. Do not rely on MEMRYA alone for legal, medical or emergency decisions.</p>
-<h2>Google Calendar integration</h2>
-<p>Google Calendar connection is optional. You choose which Google account to connect. MEMRYA may propose an event based on a conversation but creates it only after you approve the event details. You remain responsible for checking date, time, title and invited participants. Google services are also subject to Google's own terms. You can disconnect Google at any time in MEMRYA.</p>
-<h2>Subscriptions</h2>
-<p>When paid features are offered, price, included minutes, renewal details, taxes and any extra processing credits are shown in the app or storefront before purchase. Purchases and cancellations made through Apple are subject to the applicable App Store terms and legal rights. Ending a subscription does not necessarily refund prior charges.</p>
-<h2>Your content and account</h2>
-<p>Your conversations and personal content remain yours. You grant MEMRYA the permissions needed to process them to provide the features you request. You must protect your account and avoid uploading materials you do not have the right to process. For account deletion and data requests, see our <a href="/privacy.html">Privacy policy</a> and <a href="/delete-account.html">Deletion page</a>.</p>
-<h2>Availability and changes</h2>
-<p>MEMRYA is provided on an as-available basis. Features and terms may change, subject to applicable law. This page is the current version. Applicable statutory consumer rights remain unaffected.</p>
-<h2>Questions</h2>
-<p>Contact <a href="mailto:dev@memrya.co">dev@memrya.co</a>.</p>
+          <h2>Who this applies to</h2>
+          <p>These terms apply to anyone who accesses this website or uses MEMRYA.</p>
 
-</main>
-<footer><span>&copy; 2026 MEMRYA. In limited testing.</span><span><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/support.html">Support</a> &middot; <a href="/delete-account.html">Account deletion</a></span></footer>
+          <h2>Service availability</h2>
+          <p>Features, limits and availability may vary by version, platform, region or account. Current product information is shown in the app and relevant storefronts.</p>
+
+          <h2>Subscriptions and payments</h2>
+          <p>Where paid plans or extra processing time are offered, the app or storefront displays the current price, included minutes, renewal terms and applicable taxes before purchase. Purchases made through Apple are managed through the Apple account used to subscribe. Your rights under applicable law are not affected.</p>
+
+          <h2>Cancellations and failed processing</h2>
+          <p>Cancelling a subscription stops future renewals under the applicable storefront rules; it does not automatically refund previous charges. If an eligible processing job fails, MEMRYA is designed to return reserved processing minutes. For questions about your balance, contact support. Monetary refunds follow applicable storefront policies and law.</p>
+
+          <h2>Voice identity and account deletion</h2>
+          <p>Where optional voice identity is available, creating a voice profile requires explicit consent. Account export and deletion requests can be made through available app controls or support. See our Privacy and Delete account pages for further details.</p>
+
+          <h2>Your content</h2>
+          <p>Conversations you record or import remain yours. Cloud storage of your data is private, access is limited to your account, and each account's data is kept separate. Audio and transcripts are sent to processing providers when you start cloud processing or enable automatic processing in Settings.</p>
+
+          <h2>Acceptable use</h2>
+          <p>You are responsible for having the right to record and process any conversation you capture with MEMRYA, including any consent required from other participants under applicable law.</p>
+
+          <h2>Service basis</h2>
+          <p>MEMRYA and this website are provided on an as-is and as-available basis, subject to applicable law.</p>
+
+          <h2>Changes</h2>
+          <p>We may update these terms from time to time. The current version will be published on this page.</p>
+
+          <h2>Contact</h2>
+          <p>Questions about these terms can be sent to <a href="mailto:dev@memrya.co">dev@memrya.co</a>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer-deep">
+    <div class="shell footer-grid">
+      <div class="footer-brand-col">
+        <a class="brand" href="./index.html#top"><img src="./assets/icon.png" alt=""><span>MEMRYA</span></a>
+        <p data-i18n="footer.tagline">Keep the context that matters.</p>
+      </div>
+      <div><h4 data-i18n="footer.colProduct">Product</h4><a href="./index.html#product" data-i18n="nav.product">Product</a><a href="./pricing.html" data-i18n="nav.pricing">Pricing</a><a href="./changelog.html" data-i18n="footer.changelog">Changelog</a><a href="./roadmap.html" data-i18n="footer.roadmap">Roadmap</a><a href="./status.html" data-i18n="footer.status">Status</a></div>
+      <div><h4 data-i18n="footer.colCompany">Company</h4><a href="./about.html" data-i18n="nav.about">About</a><a href="./affiliates.html" data-i18n="footer.affiliates">Affiliates</a><a href="./support.html" data-i18n="footer.support">Support</a><a href="mailto:dev@memrya.co" data-i18n="nav.contact">Contact</a></div>
+      <div><h4 data-i18n="footer.colLegal">Legal</h4><a href="./privacy.html" data-i18n="footer.privacy">Privacy</a><a href="./terms.html" data-i18n="footer.terms">Terms</a><a href="./security.html" data-i18n="footer.security">Security</a><a href="./accessibility.html" data-i18n="footer.accessibility">Accessibility</a><a href="./delete-account.html" data-i18n="footer.deleteAccount">Delete account</a></div>
+    </div>
+    <div class="shell footer-bottom"><p data-i18n="footer.copyright">© 2026 MEMRYA.</p><label class="locale-switch footer-locale"><span class="sr-only" data-i18n="langswitch.label">Language</span><select class="locale-switch-control" aria-label="Language"></select></label></div>
+  </footer>
+  <script src="./i18n.js" defer></script>
+  <script src="./script.js" defer></script>
+  <script src="./site-depth.js" defer></script>
+  <script src="./terms-locale.js" defer></script>
 </body>
 </html>
+
+

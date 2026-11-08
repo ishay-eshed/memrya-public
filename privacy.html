@@ -1,52 +1,141 @@
-<!doctype html>
-<html lang="en">
+﻿<!doctype html>
+<html lang="en" dir="ltr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,follow">
-<meta name="description" content="How MEMRYA handles recordings, transcripts, Google Calendar permissions and account data.">
-<title>Privacy policy | MEMRYA</title>
-<link rel="canonical" href="https://memrya.co/privacy.html">
-<style>
-:root{color-scheme:light;--ink:#1b2230;--muted:#535e6c;--line:#d8dee8;--surface:#fff;--bg:#f5f7fa;--link:#2449ad}
-*{box-sizing:border-box}html{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px}
-body{margin:0;background:var(--bg);color:var(--ink);line-height:1.72}
-a{color:var(--link)}a:focus-visible{outline:3px solid #5479da;outline-offset:3px}
-header,main,footer{max-width:850px;margin:auto;padding:24px}
-header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:16px;flex-wrap:wrap}
-.logo{text-decoration:none;font-weight:850;letter-spacing:.13em;color:var(--ink);font-size:1.16rem}
-nav{display:flex;gap:18px;flex-wrap:wrap;font-size:.94rem}
-main{margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,5vw,46px)}
-h1{font-size:clamp(2rem,5vw,2.7rem);line-height:1.2;margin:0 0 16px;letter-spacing:-.025em}
-h2{font-size:1.25rem;margin:34px 0 9px}
-p,li{max-width:75ch}p{margin:0 0 13px}.muted{color:var(--muted)}ul{padding-left:24px}
-footer{font-size:.86rem;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;display:flex;gap:15px;justify-content:space-between;flex-wrap:wrap}
-@media(max-width:600px){header,main,footer{padding:19px}main{border-radius:0;border-left:0;border-right:0}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#e7e3da">
+  <meta name="description" content="How MEMRYA handles recordings, transcripts, account data, cloud processing and deletion.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:title" content="Privacy | MEMRYA">
+  <meta property="og:description" content="How MEMRYA handles recordings, transcripts, account data, cloud processing and deletion.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MEMRYA">
+  <meta property="og:url" content="https://memrya.co/privacy.html">
+  <meta property="og:image" content="https://memrya.co/assets/og-memrya-v4.png">
+  <meta property="og:image:secure_url" content="https://memrya.co/assets/og-memrya-v4.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="MEMRYA | Connected memory for your conversations.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Privacy | MEMRYA">
+  <meta name="twitter:description" content="How MEMRYA handles recordings, transcripts, account data, cloud processing and deletion.">
+  <meta name="twitter:image" content="https://memrya.co/assets/og-memrya-v4.png">
+  <meta name="twitter:image:alt" content="MEMRYA | Connected memory for your conversations.">
+  <link rel="canonical" href="https://memrya.co/privacy.html">
+  <link rel="icon" href="./assets/icon.png">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./site-depth.css">
+  <title>Privacy | MEMRYA</title>
 </head>
 <body>
-<header><a class="logo" href="/">MEMRYA</a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/support.html">Support</a></nav></header>
-<main><h1>Privacy policy</h1><p class="muted">Last updated: November 4, 2026 &middot; Contact: <a href="mailto:dev@memrya.co">dev@memrya.co</a></p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-glow page-glow-a" aria-hidden="true"></div>
+  <div class="page-glow page-glow-b" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="nav shell">
+      <a class="brand" href="./index.html#top" aria-label="MEMRYA home">
+        <img src="./assets/icon.png" alt="">
+        <span>MEMRYA</span>
+      </a>
+      <nav class="nav-links depth-nav" id="primary-nav" aria-label="Primary navigation">
+  <a href="./product.html" data-i18n="depth.nav.product">Product</a>
+  <a href="./use-cases.html" data-i18n="depth.nav.use">Use cases</a>
+  <a href="./integrations.html" data-i18n="depth.nav.integrations">Integrations</a>
+  <a href="./security.html" data-i18n="depth.nav.trust">Security</a>
+  <a href="./pricing.html" data-i18n="nav.pricing">Pricing</a>
+</nav>
+      <div class="nav-actions">
+        <label class="locale-switch">
+          <span class="sr-only" data-i18n="langswitch.label">Language</span>
+          <select id="locale-switch" aria-label="Language"></select>
+        </label>
+        <a class="ghost-link" href="mailto:dev@memrya.co" data-i18n="nav.contact">Contact</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="utility-main">
+    <div class="shell">
+      <div class="utility-hero reveal">
+        <span class="eyebrow" data-i18n="page.privacy.title">Privacy</span>
+        <h1 data-i18n="page.privacy.title">Privacy</h1>
+        <p data-i18n="page.privacy.intro">How MEMRYA handles your recordings, transcripts and account data.</p>
+      </div>
+      <div class="utility-grid">
+        <aside class="utility-aside reveal">
+          <p>Last updated: October 2026.</p>
+          <p>Contact: <a href="mailto:dev@memrya.co">dev@memrya.co</a></p>
+        </aside>
+        <div class="utility-content reveal">
+          <div class="notice">This page explains how MEMRYA handles recordings, transcripts and account data, including cloud processing and account-level access controls.</div>
 
-<p>MEMRYA is a conversation-memory service in limited testing. This policy describes what data MEMRYA processes, how service providers are involved, and what happens when you connect your Google Calendar. If you have questions or want to exercise your privacy rights, contact <a href="mailto:dev@memrya.co">dev@memrya.co</a>.</p>
-<h2>Data we collect and create</h2>
-<p>Depending on the features you use, MEMRYA handles account identifiers and profile details, recordings and imported audio, transcripts and language metadata, speaker labels, saved memories, summaries, searches, user feedback, and information needed to provide the service. Recording audio may include other people's voices and sensitive information: obtain any legally required permission before recording or uploading a conversation.</p>
-<h2>Audio, transcription and AI processing</h2>
-<p>MEMRYA records audio on your device and can send selected recordings to cloud processors to transcribe, analyze, and help you recall conversations. Supabase provides account and cloud data services. AssemblyAI and/or Speechmatics can receive audio for transcription, depending on the route. OpenAI can receive transcripts, excerpts and search context needed for analysis and memory features. If you opt into voice identity features, pyannote.ai may receive limited speech samples to help match speakers across recordings. Voice identity may involve biometric information and requires appropriate consent.</p>
-<h2>What Google Calendar access does</h2>
-<p><strong>Connecting your Google Calendar is optional.</strong> MEMRYA asks Google for permission to manage calendar events on calendars you own. Google's permission screen may describe read, change and delete capabilities because those are included in the Google scope. MEMRYA's current Calendar workflow does not scan your existing calendar in the background. It suggests a calendar event from the conversation analysis, displays its title, date and time for review, and sends the event to Google <strong>only after you explicitly confirm creation</strong>. If details are incomplete, you can correct them before approval.</p>
-<p>For an approved event, Google receives the event details you reviewed, such as title, start/end time, time zone, and any location or description you chose to include. MEMRYA stores Google OAuth access and refresh tokens encrypted in private, account-specific server storage so it can act on your behalf; tokens are not exposed to other MEMRYA users. OAuth state and pending event drafts are temporary. No additional guests are invited by the current flow.</p>
-<p>MEMRYA does not sell Google user data or use Google Calendar information for advertising or to train general-purpose AI models. Google Calendar account data is used only to provide the Calendar connection you request. Conversation recordings and transcripts are processed separately according to the audio/AI processing section above, not imported from Google Calendar.</p>
-<h2>Other service providers and payments</h2>
-<p>Service providers receive only the information relevant to their role. Apple and RevenueCat handle applicable purchase and subscription information, which may be linked to an internal account identifier. We do not sell recordings or Google Calendar data to advertisers.</p>
-<h2>Storage, safeguards and retention</h2>
-<p>MEMRYA uses private cloud storage and account-based access controls. Data and credentials are protected through server-side mechanisms, but MEMRYA does not claim end-to-end encryption. The amount of time information is retained depends on the data category, the feature and applicable processing-provider rules. Contact us for details regarding an individual recording, voice profile, or account. We do not promise immediate deletion from third-party systems beyond their applicable retention rules.</p>
-<h2>Your choices and requests</h2>
-<p>Connecting Google Calendar and enrolling voice identity are optional. You can disconnect Google Calendar from the MEMRYA Connections screen; this deletes MEMRYA's stored connection and attempts revocation at Google. You may also revoke MEMRYA from <a href="https://myaccount.google.com/permissions" rel="noopener">Google Account permissions</a>. Disconnecting does not remove events already created in your calendar. To request access, correction, export or deletion of account information, use available in-app controls or <a href="/delete-account.html">the account-deletion instructions</a>, or email <a href="mailto:dev@memrya.co">dev@memrya.co</a>.</p>
-<h2>Changes and contact</h2>
-<p>We may update this policy as features change. The current dated version will remain available on this page. Email <a href="mailto:dev@memrya.co">dev@memrya.co</a> for privacy and security questions.</p>
+          <h2>What MEMRYA processes</h2>
+          <p>MEMRYA's core flow is recording or importing a conversation, then uploading, transcribing and analyzing it to produce a summary, evidence and grounded answers you can search later. Audio you record or import is the basis for everything else the product creates.</p>
 
-</main>
-<footer><span>&copy; 2026 MEMRYA. In limited testing.</span><span><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/support.html">Support</a> &middot; <a href="/delete-account.html">Account deletion</a></span></footer>
+          <h2>Where processing happens</h2>
+          <p>Audio is recorded on your device. Cloud processing can start when you choose to process a conversation, enable automatic processing for recordings in Settings, or allow automatic processing for voice Quick Memories. Review these permissions before capturing sensitive conversations.</p>
+
+          <h2>Providers that receive your data</h2>
+          <p>MEMRYA uses Supabase for account services and cloud storage. Account-linked recordings, transcripts, memories and related records can be stored there.</p>
+          <p>When you process audio, AssemblyAI and/or Speechmatics receive audio for language detection and transcription, according to the processing route.</p>
+          <p>OpenAI receives transcript text and related details for analysis. Where AI-assisted memory search is available and you allow it, OpenAI can also receive your search and relevant conversation excerpts. Searches answered entirely on your phone do not send data to OpenAI.</p>
+          <p>RevenueCat receives an account-related user ID and purchase information to validate purchases, manage subscription access and provide subscription analytics.</p>
+
+          <h2>Your processing choices</h2>
+          <p>Automatic processing for regular recordings, voice Quick Memories and AI-assisted memory search have separate permissions. You can withdraw them in Settings. Withdrawal stops future use under that permission; it does not delete data already sent or stored. Use the account-deletion controls or contact support about existing data.</p>
+
+          <h2>Storage and access</h2>
+          <p>Recordings, transcripts and related account data are stored in private cloud storage. Text Quick Memories and organizational data can also sync to your MEMRYA account. Account permissions limit access to the content associated with your account.</p>
+
+          <h2>Secrets and keys</h2>
+          <p>Provider and API secrets used to talk to processing providers live server-side. They are never embedded in the mobile client.</p>
+
+          <h2>Encryption</h2>
+          <p>We do not claim end-to-end encryption. Data is protected through private, owner-scoped cloud storage and server-side secret handling as described above, not through an end-to-end encryption guarantee.</p>
+
+          <h2>Languages</h2>
+          <p>Spoken language and result language are handled separately in the product. Processing providers support a broad set of languages, but transcription quality is not equal across every one of them.</p>
+
+          <h2>Optional voice identity</h2>
+          <p>Where Voice Identity is available and you choose to enroll, MEMRYA can send a speech sample from an existing conversation to pyannote.ai to create and match a reusable voice profile. This profile contains biometric voice information used to suggest speaker matches across recordings. Enrollment requires explicit consent, including permission from the person whose voice is used. Matches can be incorrect and may need your confirmation.</p>
+          <p>Voice profiles are distinct from recordings and transcripts. To ask about the storage, processing, retention or removal of voice identity data, contact <a href="mailto:dev@memrya.co">dev@memrya.co</a>. Available controls may vary by app version. This description does not mean Voice Identity is available to every account.</p>
+
+          <h2>Retention</h2>
+          <p>Cloud retention and deletion follow MEMRYA controls and the applicable rules of the processing providers involved. Contact us if you have a question about a specific recording or account.</p>
+
+          <h2>Export and deletion</h2>
+          <p>To request an account export or deletion, use the <a href="./delete-account.html">Delete account</a> page or contact <a href="mailto:dev@memrya.co">dev@memrya.co</a>.</p>
+
+          <h2>No analytics or trackers</h2>
+          <p>This website uses no analytics, cookies, trackers or third-party JavaScript, and sets no public API keys.</p>
+
+          <h2>Questions</h2>
+          <p>For any privacy question, contact <a href="mailto:dev@memrya.co">dev@memrya.co</a>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer-deep">
+    <div class="shell footer-grid">
+      <div class="footer-brand-col">
+        <a class="brand" href="./index.html#top"><img src="./assets/icon.png" alt=""><span>MEMRYA</span></a>
+        <p data-i18n="footer.tagline">Keep the context that matters.</p>
+      </div>
+      <div><h4 data-i18n="footer.colProduct">Product</h4><a href="./index.html#product" data-i18n="nav.product">Product</a><a href="./pricing.html" data-i18n="nav.pricing">Pricing</a><a href="./changelog.html" data-i18n="footer.changelog">Changelog</a><a href="./roadmap.html" data-i18n="footer.roadmap">Roadmap</a><a href="./status.html" data-i18n="footer.status">Status</a></div>
+      <div><h4 data-i18n="footer.colCompany">Company</h4><a href="./about.html" data-i18n="nav.about">About</a><a href="./affiliates.html" data-i18n="footer.affiliates">Affiliates</a><a href="./support.html" data-i18n="footer.support">Support</a><a href="mailto:dev@memrya.co" data-i18n="nav.contact">Contact</a></div>
+      <div><h4 data-i18n="footer.colLegal">Legal</h4><a href="./privacy.html" data-i18n="footer.privacy">Privacy</a><a href="./terms.html" data-i18n="footer.terms">Terms</a><a href="./security.html" data-i18n="footer.security">Security</a><a href="./accessibility.html" data-i18n="footer.accessibility">Accessibility</a><a href="./delete-account.html" data-i18n="footer.deleteAccount">Delete account</a></div>
+    </div>
+    <div class="shell footer-bottom"><p data-i18n="footer.copyright">© 2026 MEMRYA.</p><label class="locale-switch footer-locale"><span class="sr-only" data-i18n="langswitch.label">Language</span><select class="locale-switch-control" aria-label="Language"></select></label></div>
+  </footer>
+  <script src="./i18n.js" defer></script>
+  <script src="./script.js" defer></script>
+  <script src="./site-depth.js" defer></script>
+  <script src="./privacy-locale.js" defer></script>
 </body>
 </html>
+

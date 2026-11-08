@@ -1,0 +1,51 @@
+# MEMRYA
+
+> MEMRYA is an iPhone-first AI connected-memory product. Users record or import conversations, which become source evidence in an evolving memory of people, decisions, commitments, tasks, open loops and grounded answers.
+
+## Product
+
+- Core flow: record/import -> transcription and analysis -> connected memory -> Memory search and follow-up actions -> export/share.
+- Conversations remain available as source evidence; the long-term product surface connects related people, decisions, tasks, commitments, reminders, open loops and ongoing threads across conversations.
+- Existing audio import is a core use case.
+- Speaker diarization and contextual/name speaker identity are part of the conversation-processing flow.
+- Memory search retrieves across relevant conversations while preserving links back to source evidence. Long-history cross-conversation recall is still being validated.
+- Quick Memory lets users add something worth remembering without needing a full recorded conversation.
+
+## Languages
+
+- Public UI languages: English, Arabic, Spanish, French, German, Portuguese, Italian. Arabic renders true RTL.
+- Spoken Language and Result Language are separate settings; Result Language defaults to the language of the conversation.
+- Spoken-language detection and transcription depend on the configured processing provider. This website is available in seven languages. Processing availability and quality vary by language and recording; check the app for current options.
+
+## Billing
+
+- Recording on device is intended to remain free.
+- Cloud processing consumes processing minutes.
+- MEMRYA Pro launch catalog: US$19.90 per month including 900 processing minutes (15 hours). Extra minute packs: 300 min US$8.99, 600 min US$15.99, 1,800 min US$44.99, 5,400 min US$129.99. The App Store confirms final local price, currency and renewal terms before purchase.
+
+## Availability
+
+- Existing audio import: available.
+- Zoom cloud recording import: in development, not yet available.
+- Google Meet: planned next. Microsoft Teams: planned later.
+- Google Calendar: a user-reviewed calendar draft is in testing. This is not two-way calendar sync.
+- PDF export and sharing: in testing on iPhone, not yet confirmed as generally available.
+- Voice Identity: still being tested, not generally available; optional and consent-based when offered.
+- MEMRYA for iPhone is not yet generally available in the App Store. There is no waitlist; questions can be sent to dev@memrya.co.
+
+## Trust and privacy
+
+- Provider and API secrets are server-side only, never embedded in the mobile client.
+- Cloud storage is private, access is limited to the owning account, and each account's data is kept separate.
+- Processed audio and transcripts may be sent securely to approved processing providers after the user chooses processing.
+- MEMRYA does not claim end-to-end encryption.
+- Account export and deletion requests can be made through the Delete account page or dev@memrya.co.
+
+## Website
+
+- Domain: https://memrya.co
+- No analytics, cookies, third-party JavaScript, trackers or public API keys. Strict CSP.
+
+## Contact
+
+dev@memrya.co

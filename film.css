@@ -1,0 +1,66 @@
+/* Meet MEMRYA product film (v3: v2 picture with narration and score). Homepage only. Classes use the mf- prefix. */
+.mf-watch{display:inline-flex;align-items:center;gap:10px;margin:18px 0 8px;color:#d9fff0;font:700 14px/1.2 var(--body);text-decoration:none;border-radius:99px;padding:4px 12px 4px 4px}
+.mf-watch:hover{color:#fff}
+.mf-watch:focus-visible{outline:2px solid #aaf4d8;outline-offset:3px}
+.mf-watch-icon{width:30px;height:30px;border-radius:50%;border:1.5px solid #aaf4d873;display:grid;place-items:center;flex:none}
+.mf-watch-icon::before,.mf-play-icon::before{content:"";width:0;height:0;border-style:solid;border-width:6px 0 6px 10px;border-color:transparent transparent transparent currentColor;margin-inline-start:3px}
+[dir="rtl"] .mf-watch-icon::before,[dir="rtl"] .mf-play-icon::before{margin-inline-start:0;margin-inline-end:3px}
+.mf-watch small{font-weight:600;color:#bdb1ff}
+
+.mf-film{position:relative;isolation:isolate;overflow:hidden;color:#f6f4ff;background:radial-gradient(70% 55% at 50% 0%,#2a2560 0%,transparent 70%),linear-gradient(180deg,#171832 0%,#12142a 100%);padding:clamp(56px,7vw,108px) 0 clamp(56px,6vw,92px)}
+.mf-head{text-align:center;max-width:820px;margin-bottom:clamp(26px,3.4vw,44px)}
+.mf-head .mx-eyebrow{color:#aaf4d8}
+.mf-head h2{font:750 clamp(34px,4.8vw,64px)/1.05 var(--display);letter-spacing:-.05em;margin:0 0 16px;color:#fff;text-wrap:balance}
+.mf-lede{margin:0 auto;max-width:640px;color:#c9c5e8;font-size:clamp(16px,1.5vw,19px);line-height:1.55;text-wrap:pretty}
+.mf-frame{margin-block:0;margin-inline:auto}
+.mf-player{position:relative;border-radius:clamp(16px,2vw,28px);overflow:hidden;background:#0d0e1f;box-shadow:0 0 0 1px #ffffff1c,0 50px 120px #05061499,0 18px 40px #0506144d}
+.mf-video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#0d0e1f;object-fit:cover}
+.mf-play{position:absolute;right:clamp(14px,2.2vw,30px);bottom:clamp(14px,2.2vw,30px);display:flex;align-items:center;gap:14px;padding:10px 22px 10px 10px;border:0;border-radius:99px;background:#ffffffeb;color:#15162b;font:inherit;cursor:pointer;box-shadow:0 18px 50px #0507186b;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);transition:transform .25s cubic-bezier(.2,.8,.2,1),background .2s ease}
+.mf-play:hover{transform:translateY(-2px);background:#fff}
+.mf-play:focus-visible{outline:3px solid #aaf4d8;outline-offset:4px}
+.mf-play-icon{width:52px;height:52px;border-radius:50%;background:#15162b;color:#aaf4d8;display:grid;place-items:center;flex:none}
+.mf-play-icon::before{border-width:9px 0 9px 15px;margin-inline-start:4px}
+.mf-play-text{display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-align:start}
+.mf-play-text b{font:780 16px/1.15 var(--body)}
+.mf-play-text small{font:600 12.5px/1.2 var(--body);color:#565b78}
+.mf-player.is-started .mf-play{display:none}
+.mf-player.is-ended .mf-play{display:flex}
+.mf-caption{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;margin-top:18px;color:#bab6da;font-size:13.5px;line-height:1.5}
+.mf-toggle{display:inline-flex;align-items:center;gap:9px;padding:7px 14px 7px 8px;border:1px solid #ffffff33;border-radius:99px;background:#ffffff12;color:#f6f4ff;font:700 13.5px/1 var(--body);cursor:pointer}
+.mf-toggle[hidden]{display:none}
+.mf-toggle:hover{background:#ffffff1f}
+.mf-toggle:focus-visible{outline:2px solid #aaf4d8;outline-offset:3px}
+.mf-toggle-icon{width:22px;height:22px;border-radius:50%;background:#aaf4d8;position:relative;flex:none}
+.mf-toggle-icon::before,.mf-toggle-icon::after{content:"";position:absolute;top:7px;width:3px;height:8px;border-radius:1px;background:#15162b}
+.mf-toggle-icon::before{left:7.5px}.mf-toggle-icon::after{right:7.5px}
+.mf-toggle.is-paused .mf-toggle-icon::after{display:none}
+.mf-controls{display:inline-flex;flex-wrap:wrap;gap:10px}
+.mf-controls[hidden]{display:none}
+.mf-sound-icon{flex:none;display:block}
+.mf-sound-icon circle{fill:#aaf4d8}
+.mf-sound .mf-sound-off,.mf-sound.is-muted .mf-sound-on{display:none}
+.mf-sound.is-muted .mf-sound-off{display:inline}
+.mf-sound.is-muted .mf-sound-icon circle{fill:#c9c5e8}
+.mf-narration{margin:12px 0 0;max-width:820px;color:#bab6da}
+.mf-toggle.is-paused .mf-toggle-icon::before{left:8.5px;top:6px;width:0;height:0;border-radius:0;background:none;border-style:solid;border-width:5px 0 5px 7px;border-color:transparent transparent transparent #15162b}
+.mf-cast{display:flex;align-items:center;gap:12px;margin:0;padding:0;list-style:none}
+.mf-cast{flex-wrap:wrap}
+.mf-cast span{display:flex;flex:none;padding-inline-end:8px}
+.mf-cast img{width:32px;height:32px;border-radius:50%;margin-inline-end:-8px;box-shadow:0 0 0 2px #12142a}
+.mf-cast p{margin:0;flex:1 1 220px}
+.mf-text{margin-top:16px;color:#c9c5e8;font-size:14.5px;line-height:1.6}
+.mf-text summary{cursor:pointer;color:#aaf4d8;font-weight:700;width:max-content;max-width:100%;border-radius:6px}
+.mf-text summary:focus-visible{outline:2px solid #aaf4d8;outline-offset:3px}
+.mf-text ol{margin:12px 0 0;padding-inline-start:22px;max-width:820px;display:grid;gap:6px}
+
+@media(max-width:680px){
+  .mf-player.is-portrait .mf-video{aspect-ratio:4/5}
+  .mf-head{text-align:start}
+  .mf-play{left:12px;right:12px;bottom:12px;padding-inline-end:16px}
+  .mf-play-icon{width:46px;height:46px}
+  .mf-caption{flex-direction:column;align-items:flex-start}
+  .mf-watch{margin-top:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  .mf-play,.mf-play:hover{transition:none;transform:none}
+}
