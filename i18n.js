@@ -110,7 +110,7 @@ window.MEMRYA_I18N = (() => {
 
       // import / integrations
       'integrations.eyebrow': 'Import & integrations',
-      'integrations.title': 'Bring conversations in from where they already happen',
+      'integrations.title': "Works with your tools",
       'integrations.audioTitle': 'Existing audio import',
       'integrations.audioDesc': 'Import an existing recording and add it to your MEMRYA memory.',
       'integrations.audioBadge': 'Available',
@@ -354,7 +354,7 @@ window.MEMRYA_I18N = (() => {
 
       // import / integrations
       'integrations.eyebrow': 'الاستيراد والتكاملات',
-      'integrations.title': 'اجلب المحادثات من الأماكن التي تحدث فيها بالفعل',
+      'integrations.title': "يعمل مع أدواتك",
       'integrations.audioTitle': 'استيراد تسجيلات صوتية موجودة',
       'integrations.audioDesc': 'استورد تسجيلات صوتية لديك بالفعل, طريقة أساسية ومتاحة لبناء الذاكرة في MEMRYA.',
       'integrations.audioBadge': 'متاح',
@@ -597,7 +597,7 @@ window.MEMRYA_I18N = (() => {
 
       // import / integrations
       'integrations.eyebrow': 'IMPORTACIÓN E INTEGRACIONES',
-      'integrations.title': 'Trae conversaciones desde donde ya ocurren',
+      'integrations.title': "Con tus herramientas",
       'integrations.audioTitle': 'Importación de audio existente',
       'integrations.audioDesc': 'Importa audio que ya tienes: una forma disponible y central de construir memoria en MEMRYA.',
       'integrations.audioBadge': 'Disponible',
@@ -841,7 +841,7 @@ window.MEMRYA_I18N = (() => {
 
       // import / integrations
       'integrations.eyebrow': 'IMPORTATION ET INTÉGRATIONS',
-      'integrations.title': 'Importez vos conversations depuis les endroits où elles ont déjà lieu',
+      'integrations.title': "Compatible avec vos outils",
       'integrations.audioTitle': 'Importation d\'audio existant',
       'integrations.audioDesc': 'Importez un audio que vous possédez déjà, un moyen central et disponible de construire de la mémoire dans MEMRYA.',
       'integrations.audioBadge': 'Disponible',
@@ -1085,7 +1085,7 @@ window.MEMRYA_I18N = (() => {
 
       // import / integrations
       'integrations.eyebrow': 'IMPORT & INTEGRATIONEN',
-      'integrations.title': 'Bring Gespräche dorthin, wo sie bereits stattfinden',
+      'integrations.title': "Mit deinen Tools",
       'integrations.audioTitle': 'Import vorhandener Audiodateien',
       'integrations.audioDesc': 'Importiere Audio, das du bereits hast, eine zentrale, verfügbare Möglichkeit, Gedächtnis in MEMRYA aufzubauen.',
       'integrations.audioBadge': 'Verfügbar',
@@ -1329,7 +1329,7 @@ window.MEMRYA_I18N = (() => {
 
       // import / integrations
       'integrations.eyebrow': 'IMPORTAÇÃO E INTEGRAÇÕES',
-      'integrations.title': 'Traga conversas de onde elas já acontecem',
+      'integrations.title': "Com as suas ferramentas",
       'integrations.audioTitle': 'Importação de áudio existente',
       'integrations.audioDesc': 'Importe áudio que você já tem, uma forma central e disponível de construir memória na MEMRYA.',
       'integrations.audioBadge': 'Disponível',
@@ -1573,7 +1573,7 @@ window.MEMRYA_I18N = (() => {
 
       // import / integrations
       'integrations.eyebrow': 'IMPORTAZIONE E INTEGRAZIONI',
-      'integrations.title': 'Porta le conversazioni da dove già avvengono',
+      'integrations.title': "Con i tuoi strumenti",
       'integrations.audioTitle': 'Importazione di audio esistente',
       'integrations.audioDesc': 'Importa audio che hai già, un modo centrale e disponibile per costruire memoria in MEMRYA.',
       'integrations.audioBadge': 'Disponibile',

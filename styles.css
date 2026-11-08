@@ -159,13 +159,6 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button,sel
 .mx-lang>p:not(.mx-eyebrow){line-height:1.75;color:#626579;font-size:15px}
 .mx-lang-list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:23px 0 0;padding:0}
 .mx-lang-list li{font-size:12px;background:#fff;border:1px solid #dcd8e9;padding:10px 14px;border-radius:999px}
-.mx-imports{background:#fff;border-radius:24px;padding:32px;border:1px solid #e0dce8}
-.mx-imports h3{font:760 clamp(25px,3vw,37px)/1.14 var(--display);margin:10px 0 21px;letter-spacing:-.04em}
-.mx-status-list{padding:0;margin:0;list-style:none}
-.mx-status-list li{display:flex;gap:13px;justify-content:space-between;align-items:center;padding:15px 0;border-top:1px solid #eae8f0}
-.mx-status-list strong{font-size:13px}
-.mx-state{font-size:11px;background:#f6ebda;color:#856123;padding:8px 11px;border-radius:999px;white-space:nowrap;font-weight:800}
-.mx-state-live{background:#dcf5e6;color:#236b48}
 .mx-trust{padding:95px 0;background:#161a30;color:#fff}
 .mx-trust .mx-section-head h2{color:#fff}
 .mx-trust-grid{list-style:none;margin:30px 0 7px;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
@@ -234,7 +227,7 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button,sel
 .mx-use-card{flex:0 0 min(85vw,330px);scroll-snap-align:start}
 .mx-use-card img{height:220px}
 .mx-use-body{padding:19px}
-.mx-reach-grid{gap:23px}.mx-imports{padding:24px}
+.mx-reach-grid{gap:23px}
 .mx-trust-grid{grid-template-columns:1fr;gap:10px}.mx-trust-grid li{padding:20px}
 .mx-price-grid{gap:19px}
 .mx-early-inner{display:grid;grid-template-columns:48px 1fr;gap:15px}
@@ -278,7 +271,7 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button,sel
 .mx-home .mx-section-head>p:last-child,.mx-home .mf-lede{text-wrap:pretty}
 .mx-home .mx-chapter h3,.mx-home .mx-chapter-copy h2{font-weight:640;font-size:clamp(25px,2.7vw,40px);line-height:1.12;letter-spacing:-.028em;text-wrap:balance}
 .mx-home .mx-use-tag{text-transform:none;letter-spacing:0;font-size:13px;font-weight:700}
-.mx-home .mx-use-body h3,.mx-home .mx-reach h2,.mx-home .mx-imports h3,.mx-home .mx-price-copy h2,.mx-home .mx-early-copy h2,.mx-home .mx-trust-grid h3{font-weight:640;letter-spacing:-.024em;text-wrap:balance}
+.mx-home .mx-use-body h3,.mx-home .mx-reach h2,.mx-home .mx-price-copy h2,.mx-home .mx-early-copy h2,.mx-home .mx-trust-grid h3{font-weight:640;letter-spacing:-.024em;text-wrap:balance}
 .mx-home .mx-stage-kicker{text-transform:none;letter-spacing:0;font-size:12.5px;font-weight:700}
 .mx-home .mx-faq .faq-heading h2{font-weight:640;font-size:clamp(30px,3.6vw,52px);line-height:1.08;letter-spacing:-.032em;text-wrap:balance}
 .mx-home .mx-faq .faq-heading p{text-transform:none;letter-spacing:0}
@@ -314,7 +307,6 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button,sel
 .mx-home .mx-use-body h3{font-size:19px;line-height:1.25;margin:10px 0 16px}
 .mx-home .mx-use-ask{font-size:13px}
 .mx-home .mx-reach h2{font-size:clamp(26px,7vw,31px)}
-.mx-home .mx-imports h3{font-size:22px}
 .mx-home .mx-trust-grid h3{font-size:17px;margin:14px 0 8px}.mx-home .mx-trust-grid p{font-size:14px;line-height:1.55}
 .mx-home .mx-trust-grid li{padding:18px}
 .mx-home .mx-price-copy h2{font-size:clamp(26px,7vw,31px);margin:8px 0 12px}
@@ -340,11 +332,6 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button,sel
 .utility-aside{font-size:13px}
 .footer-grid h4{font-size:12px}
 .footer-bottom p{font-size:12px}
-.mx-state{font-size:12px}
-.mx-status-list li>strong{min-width:0}
-@media(max-width:680px){
-.mx-status-list .mx-state{white-space:normal;text-align:end;max-width:60%;line-height:1.3}
-}
 @media(max-width:620px){
 .mx-home .nav>.nav-actions .nav-cta{font-size:12px}
 }
@@ -500,3 +487,13 @@ html.mx-story-active .mx-home .nav-links a:after{background:#d9d6f0}
 /* Editorial no-CTA while the dark story band is under the header. Keep focus access for keyboard and open menu. */
 html.mx-story-active .mx-home .nav>.nav-actions .nav-cta{opacity:0;pointer-events:none}
 html.mx-story-active .mx-home .site-header:focus-within .nav>.nav-actions .nav-cta{opacity:1;pointer-events:auto}
+
+/* R17 — local brand icon strip, no badges or integration detail styling */
+.mx-connect-strip{min-width:0;align-self:center;padding:8px 0}
+.mx-connect-strip h3{font:640 clamp(23px,2.7vw,31px)/1.17 var(--display);letter-spacing:-.035em;margin:0 0 27px;color:#242439}
+.mx-brand-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));list-style:none;margin:0;padding:0;gap:clamp(12px,2vw,24px)}
+.mx-brand-list li{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;min-width:0;font-size:clamp(11px,1.1vw,13px);font-weight:650;line-height:1.35;color:#383749}
+.mx-brand-icon{display:flex;align-items:center;justify-content:center;width:clamp(63px,6vw,75px);height:clamp(63px,6vw,75px);border-radius:21px;background:rgba(255,255,255,.78);border:1px solid rgba(63,56,95,.10);box-shadow:0 7px 30px rgba(27,24,53,.045)}
+.mx-brand-icon img{display:block;width:40px;height:40px;object-fit:contain}
+.mx-connect-caption{font-size:13px;line-height:1.65;color:#5b5c70;margin:26px 0 0;max-width:480px}
+@media(max-width:780px){.mx-connect-strip{padding:12px 0 4px}.mx-connect-strip h3{font-size:clamp(24px,6vw,29px);margin-bottom:21px}.mx-brand-list{gap:8px}.mx-brand-icon{width:62px;height:62px;border-radius:18px}.mx-brand-icon img{width:36px;height:36px}.mx-brand-list li{font-size:11px}.mx-connect-caption{font-size:12px;margin-top:21px}}

@@ -26,7 +26,7 @@
   <meta name="twitter:image:alt" content="MEMRYA | Connected memory for your conversations">
   <link rel="canonical" href="https://memrya.co/">
   <link rel="icon" href="./assets/icon.png">
-  <link rel="stylesheet" href="./styles.css?v=r15">
+  <link rel="stylesheet" href="./styles.css?v=r17">
   <link rel="stylesheet" href="./site-depth.css?v=r16">
   <link rel="stylesheet" href="./film.css">
   <script src="./hero-intro.js?v=r14"></script>
@@ -42,7 +42,7 @@
       <nav class="nav-links depth-nav" id="primary-nav" aria-label="Primary navigation">
   <a href="./product.html" data-i18n="depth.nav.product">Product</a>
   <a href="./use-cases.html" data-i18n="depth.nav.use">Use cases</a>
-  <a href="./integrations.html" data-i18n="depth.nav.integrations">Integrations</a>
+
   <a href="./security.html" data-i18n="depth.nav.trust">Security</a>
   <a href="./pricing.html" data-i18n="nav.pricing">Pricing</a>
 </nav>
@@ -278,17 +278,15 @@
           <p data-i18n="faq.a3">This website is available in English, Arabic, Spanish, French, German, Portuguese and Italian. Transcription availability and quality vary by language and recording. Check the app for current processing language options.</p>
           <ul class="mx-lang-list"><li>English</li><li lang="ar">العربية</li><li lang="es">Español</li><li lang="fr">Français</li><li lang="de">Deutsch</li><li lang="pt">Português</li><li lang="it">Italiano</li></ul>
         </div>
-        <div class="mx-imports" data-reveal>
-          <h3 data-i18n="integrations.title">Bring conversations in from where they already happen</h3>
-          <ul class="mx-status-list">
-            <li><strong data-i18n="integrations.audioTitle">Existing audio import</strong><span class="mx-state mx-state-live" data-i18n="integrations.audioBadge">Available</span></li>
-            <li><strong data-i18n="integrations.zoomTitle">Zoom recordings</strong><span class="mx-state" data-i18n="integrations.zoomBadge">Upload audio</span></li>
-            <li><strong data-i18n="integrations.meetTitle">Google Meet recordings</strong><span class="mx-state" data-i18n="integrations.meetBadge">Upload audio</span></li>
-            <li><strong>Google Calendar</strong><span class="mx-state" data-i18n="integrations.calendarBadge">Event drafts</span></li>
-          </ul>
-          <p class="mx-fineprint" data-i18n="home2.integrationsNote">Import Zoom and Google Meet recordings as audio files. Review Google Calendar event drafts.</p>
-          <a class="mx-text-link" href="./integrations.html" data-i18n="home2.integrationsLink">Integration details</a>
-        </div>
+        <div class="mx-connect-strip" id="integrations" data-reveal>
+  <h3 data-i18n="integrations.title">Works with your tools</h3>
+  <ul class="mx-brand-list" aria-label="Zoom, Google Meet, Google Calendar">
+    <li><span class="mx-brand-icon"><img src="./assets/brands/zoom.svg" width="42" height="42" loading="lazy" decoding="async" alt=""></span><span>Zoom</span></li>
+    <li><span class="mx-brand-icon"><img src="./assets/brands/googlemeet.svg" width="42" height="42" loading="lazy" decoding="async" alt=""></span><span>Google Meet</span></li>
+    <li><span class="mx-brand-icon"><img src="./assets/brands/googlecalendar.svg" width="42" height="42" loading="lazy" decoding="async" alt=""></span><span>Google Calendar</span></li>
+  </ul>
+  <p class="mx-connect-caption" data-i18n="home2.integrationsNote">Import Zoom and Google Meet recordings as audio files. Review Google Calendar event drafts.</p>
+</div>
       </div>
     </section>
     <section class="mx-trust" id="trust" aria-labelledby="trust-title">
@@ -373,10 +371,10 @@
     </div>
     <div class="shell footer-bottom"><p data-i18n="footer.copyright">© 2026 MEMRYA</p><label class="locale-switch footer-locale"><span class="sr-only" data-i18n="langswitch.label">Language</span><select class="locale-switch-control" aria-label="Language"></select></label></div>
   </footer>
-  <script src="./i18n.js?v=r11" defer></script>
+  <script src="./i18n.js?v=r17" defer></script>
   <script src="./script.js" defer></script>
   <script src="./site-depth.js?v=r16" defer></script>
-  <script src="./home-locale.js?v=r11" defer></script>
+  <script src="./home-locale.js?v=r17" defer></script>
   <script src="./home-locale-detail.js" defer></script>
   <script src="./film.js" defer></script>
 </body>

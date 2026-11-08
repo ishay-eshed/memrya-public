@@ -67,7 +67,6 @@
 .depth-directory-card h3{font-family:var(--display);font-size:26px;line-height:1.1;letter-spacing:-.04em;margin:16px 0 11px}
 .depth-directory-card p{font-size:12px;line-height:1.65;color:#626973;margin:0}
 .depth-directory-card b:last-child,.depth-directory-card strong{font-size:11px;color:var(--violet);margin-top:auto;padding-top:18px}
-.depth-integration-detail{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:65px;padding-top:70px;padding-bottom:76px;border-top:1px solid #d7d2cc;scroll-margin-top:95px}
 .depth-detail-side h2{font-family:var(--display);font-size:44px;letter-spacing:-.05em;line-height:1;margin:18px 0}
 .depth-detail-side p,.depth-detail-main p{color:#626972;font-size:14px;line-height:1.7}
 .depth-detail-main{background:#f7f4ee;padding:30px 36px;border-radius:22px}
@@ -91,7 +90,7 @@
 .depth-page :target{scroll-margin-top:100px}
 .depth-page a:focus-visible,.depth-page button:focus-visible{outline:3px solid #9185ed;outline-offset:3px}
 @media(max-width:1100px){.depth-hero{gap:30px;grid-template-columns:1fr 1fr}.depth-card-grid{grid-template-columns:repeat(2,1fr)}.depth-feature,.depth-case{gap:38px}.depth-footer-grid{gap:25px}}
-@media(max-width:800px){.depth-hero,.depth-feature,.depth-integration-detail,.depth-case{grid-template-columns:1fr;gap:38px}.depth-hero{padding-top:60px;padding-bottom:65px;min-height:auto}.depth-hero-short{min-height:auto}.depth-feature{padding-top:75px;padding-bottom:75px}.depth-feature-alt .depth-feature-panel{order:0}.depth-index-grid{grid-template-columns:repeat(2,1fr)}.depth-footer-grid{grid-template-columns:repeat(2,1fr)}.depth-decision{display:grid}.depth-case-image{height:360px}}
+@media(max-width:800px){.depth-hero,.depth-feature,.depth-case{grid-template-columns:1fr;gap:38px}.depth-hero{padding-top:60px;padding-bottom:65px;min-height:auto}.depth-hero-short{min-height:auto}.depth-feature{padding-top:75px;padding-bottom:75px}.depth-feature-alt .depth-feature-panel{order:0}.depth-index-grid{grid-template-columns:repeat(2,1fr)}.depth-footer-grid{grid-template-columns:repeat(2,1fr)}.depth-decision{display:grid}.depth-case-image{height:360px}}
 @media(max-width:590px){.depth-hero-copy h1{font-size:clamp(40px,11vw,55px)}.depth-hero-copy>p:not(.depth-eyebrow){font-size:15px}.depth-hero-visual{padding:20px}.depth-demo-head b{font-size:22px}.depth-demo-head small{font-size:10px}.depth-index-grid{grid-template-columns:1fr 1fr}.depth-index-grid a{padding:22px 13px;min-height:116px}.depth-index-grid b{font-size:18px}.depth-card-grid{grid-template-columns:1fr}.depth-directory{padding-top:65px;padding-bottom:60px}.depth-feature-panel{padding:20px}.depth-detail-main{padding:24px}.depth-detail-side h2{font-size:37px}.depth-case-image{height:260px}.depth-case{padding-top:60px;padding-bottom:60px}.depth-decision{padding:33px 24px;margin-top:50px}.depth-decision h2{font-size:31px}.depth-footer-grid{grid-template-columns:1fr 1fr;gap:28px}.depth-footer-grid>div:first-child{grid-column:1/-1}}
 @media(prefers-reduced-motion:reduce){.depth-page *{transition-duration:0s!important;animation-duration:0s!important}}
 .depth-nav{gap:19px}
@@ -214,13 +213,3 @@
 .depth-chip{font-size:11px}
 @media(max-width:680px){.depth-decision .depth-button{white-space:normal;text-align:center}.depth-decision>*{min-width:0}}
 @media(max-width:430px){.depth-chip{white-space:normal}.depth-hero-copy,.depth-hero-copy>*{min-width:0;overflow-wrap:anywhere}}
-
-/* R16 simple integration cards */
-.depth-integrations-compact{min-height:0;grid-template-columns:1fr;padding-top:75px;padding-bottom:18px}
-.depth-integrations-compact .depth-hero-copy{grid-column:1/-1;max-width:760px}
-.depth-integrations-compact .depth-hero-copy>p:not(.depth-eyebrow){max-width:620px}
-.depth-integrations-list{padding-top:38px;padding-bottom:92px}
-.depth-integrations-list .depth-card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-.depth-integrations-list .depth-directory-card{min-height:235px}
-.depth-integration-note{font-size:12px;color:#646b73;line-height:1.7;margin:22px 0 0}
-@media(max-width:800px){.depth-integrations-compact{padding-top:46px;padding-bottom:8px}.depth-integrations-list .depth-card-grid{grid-template-columns:1fr}.depth-integrations-list{padding-top:24px;padding-bottom:60px}.depth-integrations-list .depth-directory-card{min-height:165px}}

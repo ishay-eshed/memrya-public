@@ -1,6 +1,6 @@
 (() => {
 'use strict';
-// Localized labels for the three draft depth pages. The full body copy is managed separately.
+// Localized labels for the two depth pages. The full body copy is managed separately.
 const copy = {
   ar: {
     'Skip to content':'انتقل إلى المحتوى','MEMRYA home':'الصفحة الرئيسية لـ MEMRYA','Primary navigation':'التنقل الرئيسي','Language':'اللغة','Open menu':'افتح القائمة',
@@ -42,14 +42,6 @@ const pages={
  de:['Vernetztes Gedächtnis | MEMRYA','Erfahren Sie, wie MEMRYA Gespräche aufzeichnet, verknüpft und für weitere Schritte nutzbar macht.'],
  pt:['Memória ligada | MEMRYA','Descubra como a MEMRYA regista, relaciona e recupera conversas para facilitar o acompanhamento.'],
  it:['Memoria connessa | MEMRYA','Scopri come MEMRYA registra, collega e ritrova le conversazioni per aiutarti a seguire le attività.']},
- 'integrations.html':{
- en:['Connections and imports | MEMRYA','Zoom cloud recording import, Google Meet transcript import, Google Calendar event drafts and audio import in MEMRYA, with the current access for each.'],
- ar:['الربط والاستيراد | MEMRYA','استيراد تسجيلات Zoom السحابية ونصوص Google Meet، ومسودات أحداث Google Calendar، واستيراد التسجيلات الصوتية في MEMRYA، مع توضيح الإتاحة الحالية لكل منها.'],
- es:['Conexiones e importaciones | MEMRYA','Importación de grabaciones en la nube de Zoom y de transcripciones de Google Meet, borradores de eventos de Google Calendar e importación de audio en MEMRYA, con el acceso actual de cada opción.'],
- fr:['Connexions et imports | MEMRYA','Import des enregistrements cloud Zoom et des transcriptions Google Meet, brouillons d’événements Google Calendar et import audio dans MEMRYA, avec l’accès actuel de chaque option.'],
- de:['Verbindungen und Importe | MEMRYA','Import von Zoom-Cloud-Aufzeichnungen und Google Meet-Transkripten, Google Calendar-Terminentwürfe und Audioimport in MEMRYA – mit dem aktuellen Zugang für jede Option.'],
- pt:['Ligações e importações | MEMRYA','Importação de gravações na nuvem do Zoom e de transcrições do Google Meet, rascunhos de eventos do Google Calendar e importação de áudio na MEMRYA, com o acesso atual de cada opção.'],
- it:['Connessioni e importazioni | MEMRYA','Importazione di registrazioni cloud di Zoom e trascrizioni di Google Meet, bozze di eventi di Google Calendar e importazione audio in MEMRYA, con l’accesso attuale di ciascuna opzione.']},
  'use-cases.html':{
  en:['Real-life use cases | MEMRYA','See connected memory in family life, friendships, doctor visits, work meetings and learning.'],
  ar:['حالات استخدام من الحياة | MEMRYA','اكتشف كيف تساعد الذاكرة المترابطة العائلة والأصدقاء وزيارات الطبيب واجتماعات العمل والتعلّم.'],
