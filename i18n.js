@@ -140,7 +140,7 @@ window.MEMRYA_I18N = (() => {
 
       // trust / privacy
       'trust.eyebrow': 'Built with trust in mind',
-      'trust.title': 'Your memory should feel like yours',
+      'trust.title': 'Privacy and control',
       'trust.point1': 'You decide when recording starts.',
       'trust.point2': 'Evidence stays connected to the original conversation.',
       'trust.point3': 'Voice Identity is optional and requires your explicit consent.',
@@ -159,7 +159,7 @@ window.MEMRYA_I18N = (() => {
 
       // faq
       'faq.eyebrow': 'FAQ',
-      'faq.title': 'Questions worth answering upfront',
+      'faq.title': 'Common questions',
       'faq.q1': 'What does MEMRYA actually record and store?',
       'faq.a1': 'MEMRYA turns a recorded or imported conversation into a transcript, summary, decisions, people and evidence you can search later. Cloud storage is private and access is owner-scoped.',
       'faq.q2': 'Is Voice Identity available now?',
@@ -383,7 +383,7 @@ window.MEMRYA_I18N = (() => {
 
       // trust / privacy
       'trust.eyebrow': 'مبني على الثقة',
-      'trust.title': 'ينبغي أن تشعر بأن ذاكرتك ملكك حقًا',
+      'trust.title': 'الخصوصية والتحكم',
       'trust.point1': 'أنت من يقرر متى يبدأ التسجيل.',
       'trust.point2': 'تبقى الأدلة مرتبطة بالمحادثة الأصلية.',
       'trust.point3': 'هوية الصوت اختيارية وتتطلب موافقتك الصريحة.',
@@ -402,7 +402,7 @@ window.MEMRYA_I18N = (() => {
 
       // faq
       'faq.eyebrow': 'الأسئلة الشائعة',
-      'faq.title': 'أسئلة يستحق الإجابة عنها مسبقًا',
+      'faq.title': 'أسئلة شائعة',
       'faq.q1': 'ماذا تسجّل MEMRYA وتخزّن فعليًا؟',
       'faq.a1': 'تحوّل MEMRYA محادثة مسجَّلة أو مستوردة إلى نص مفرَّغ وملخص وقرارات وأشخاص وأدلة يمكن البحث فيها لاحقًا. التخزين السحابي خاص والوصول إليه محصور بصاحب الحساب.',
       'faq.q2': 'هل هوية الصوت متاحة الآن؟',
@@ -625,7 +625,7 @@ window.MEMRYA_I18N = (() => {
 
       // trust / privacy
       'trust.eyebrow': 'CONSTRUIDO PENSANDO EN LA CONFIANZA',
-      'trust.title': 'Tu memoria debería sentirse tuya',
+      'trust.title': 'Privacidad y control',
       'trust.point1': 'Tú decides cuándo empieza la grabación.',
       'trust.point2': 'La evidencia permanece conectada a la conversación original.',
       'trust.point3': 'La identidad de voz es opcional y requiere tu consentimiento explícito.',
@@ -644,7 +644,7 @@ window.MEMRYA_I18N = (() => {
 
       // faq
       'faq.eyebrow': 'PREGUNTAS FRECUENTES',
-      'faq.title': 'Preguntas que vale la pena responder de antemano',
+      'faq.title': 'Preguntas frecuentes',
       'faq.q1': '¿Qué graba y almacena realmente MEMRYA?',
       'faq.a1': 'MEMRYA convierte una conversación grabada o importada en una transcripción, resumen, decisiones, personas y evidencia que puedes buscar más tarde. El almacenamiento en la nube es privado y el acceso está limitado al propietario.',
       'faq.q2': '¿Está disponible la identidad de voz ahora?',
@@ -868,7 +868,7 @@ window.MEMRYA_I18N = (() => {
 
       // trust / privacy
       'trust.eyebrow': 'CONÇU AVEC LA CONFIANCE EN TÊTE',
-      'trust.title': 'Votre mémoire doit vous ressembler',
+      'trust.title': 'Confidentialité et contrôle',
       'trust.point1': 'Vous décidez du moment où l\'enregistrement commence.',
       'trust.point2': 'Les preuves restent liées à la conversation d\'origine.',
       'trust.point3': "L'identité vocale est facultative et nécessite votre consentement explicite.",
@@ -887,7 +887,7 @@ window.MEMRYA_I18N = (() => {
 
       // faq
       'faq.eyebrow': 'FAQ',
-      'faq.title': 'Des questions qui méritent une réponse à l\'avance',
+      'faq.title': 'Questions fréquentes',
       'faq.q1': 'Que MEMRYA enregistre-t-il et stocke-t-il réellement ?',
       'faq.a1': 'MEMRYA transforme une conversation enregistrée ou importée en transcription, résumé, décisions, personnes et preuves que vous pouvez rechercher plus tard. Le stockage cloud est privé et l\'accès est réservé au propriétaire.',
       'faq.q2': 'L\'identité vocale est-elle disponible maintenant ?',
@@ -1111,7 +1111,7 @@ window.MEMRYA_I18N = (() => {
 
       // trust / privacy
       'trust.eyebrow': 'MIT VERTRAUEN IM BLICK GEBAUT',
-      'trust.title': 'Dein Gedächtnis sollte sich wie deins anfühlen',
+      'trust.title': 'Datenschutz und Kontrolle',
       'trust.point1': 'Du entscheidest, wann die Aufnahme beginnt.',
       'trust.point2': 'Belege bleiben mit dem ursprünglichen Gespräch verbunden.',
       'trust.point3': 'Die Stimmidentität ist optional und erfordert Ihre ausdrückliche Einwilligung.',
@@ -1130,7 +1130,7 @@ window.MEMRYA_I18N = (() => {
 
       // faq
       'faq.eyebrow': 'FAQ',
-      'faq.title': 'Fragen, die es wert sind, im Voraus beantwortet zu werden',
+      'faq.title': 'Häufige Fragen',
       'faq.q1': 'Was zeichnet MEMRYA tatsächlich auf und speichert es?',
       'faq.a1': 'MEMRYA verwandelt ein aufgenommenes oder importiertes Gespräch in ein Transkript, eine Zusammenfassung, Entscheidungen, Personen und Belege, die du später durchsuchen kannst. Der Cloud-Speicher ist privat, und der Zugriff ist auf den Eigentümer beschränkt.',
       'faq.q2': 'Ist die Stimmidentität jetzt verfügbar?',
@@ -1354,7 +1354,7 @@ window.MEMRYA_I18N = (() => {
 
       // trust / privacy
       'trust.eyebrow': 'CONSTRUÍDO PENSANDO EM CONFIANÇA',
-      'trust.title': 'Sua memória deve parecer sua',
+      'trust.title': 'Privacidade e controlo',
       'trust.point1': 'Você decide quando a gravação começa.',
       'trust.point2': 'As evidências permanecem conectadas à conversa original.',
       'trust.point3': 'A identidade de voz é opcional e exige o seu consentimento explícito.',
@@ -1373,7 +1373,7 @@ window.MEMRYA_I18N = (() => {
 
       // faq
       'faq.eyebrow': 'PERGUNTAS FREQUENTES',
-      'faq.title': 'Perguntas que vale a pena responder desde já',
+      'faq.title': 'Perguntas frequentes',
       'faq.q1': 'O que a MEMRYA realmente grava e armazena?',
       'faq.a1': 'A MEMRYA transforma uma conversa gravada ou importada em transcrição, resumo, decisões, pessoas e evidências que você pode pesquisar depois. O armazenamento na nuvem é privado e o acesso é restrito ao proprietário.',
       'faq.q2': 'A identidade de voz está disponível agora?',
@@ -1597,7 +1597,7 @@ window.MEMRYA_I18N = (() => {
 
       // trust / privacy
       'trust.eyebrow': 'COSTRUITO PENSANDO ALLA FIDUCIA',
-      'trust.title': 'La tua memoria dovrebbe sembrare tua',
+      'trust.title': 'Privacy e controllo',
       'trust.point1': 'Decidi tu quando inizia la registrazione.',
       'trust.point2': 'Le prove restano collegate alla conversazione originale.',
       'trust.point3': "L'identità vocale è facoltativa e richiede il tuo consenso esplicito.",
@@ -1616,7 +1616,7 @@ window.MEMRYA_I18N = (() => {
 
       // faq
       'faq.eyebrow': 'FAQ',
-      'faq.title': 'Domande che vale la pena affrontare in anticipo',
+      'faq.title': 'Domande frequenti',
       'faq.q1': 'Cosa registra e memorizza davvero MEMRYA?',
       'faq.a1': "MEMRYA trasforma una conversazione registrata o importata in trascrizione, riepilogo, decisioni, persone e prove che puoi cercare in seguito. L'archiviazione cloud è privata e l'accesso è limitato al proprietario.",
       'faq.q2': "L'identità vocale è disponibile adesso?",

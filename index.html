@@ -56,13 +56,11 @@
         <span></span><span></span>
       </button>
     </div>
-  </header>  <main id="main">
-    <!-- Fold 1: promise, action and a working product preview -->
+  </header>
+  <main id="main">
     <section class="mx-hero" id="top" aria-labelledby="hero-title">
-      <div class="mx-hero-glow" aria-hidden="true"></div>
       <div class="shell mx-hero-grid">
         <div class="mx-hero-copy">
-          <p class="mx-eyebrow" data-i18n="hero.eyebrow">Conversations, connected</p>
           <h1 id="hero-title"><span data-i18n="hero.title1">Every conversation</span> <span class="mx-accent" data-i18n="hero.title2">becomes part of your memory</span></h1>
           <p class="mx-hero-sub" data-i18n="home2.heroSub">MEMRYA links the people, decisions and tasks across your conversations, then answers your questions with the sources attached</p>
           <div class="mx-hero-actions">
@@ -70,11 +68,6 @@
             <a class="mx-btn mx-btn-ghost" href="#contact" data-i18n="home2.ctaEarly">Talk to the team</a>
           </div>
           <a class="mf-watch" href="#film" data-film-watch><span class="mf-watch-icon" aria-hidden="true"></span><span data-film-i18n="watch">Watch MEMRYA in action</span> <small>0:32</small></a>
-          <ul class="mx-proof" aria-label="Product capabilities">
-            <li data-i18n="hero.proof1">Multilingual conversations</li>
-            <li data-i18n="hero.proof2">Grounded in source conversations</li>
-            <li data-i18n="hero.proof3">Private, account-scoped memory</li>
-          </ul>
         </div>
 
         <div class="mx-demo" id="memory-demo" data-mx-demo data-stage="1" role="group" aria-labelledby="demo-label">
@@ -140,8 +133,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Meet MEMRYA: 32 s product film (v3 = v2 picture + English narration and original score). Illustrative sample, fictional people, original illustrated portraits. Click to play only; sound starts only from that click. Picture source: docs/film-studio/v2/, audio source: docs/film-studio/v3/. Silent v2 files stay in assets/film for rollback. -->
     <section class="mf-film" id="film" aria-labelledby="film-title">
       <div class="shell mf-head">
         <p class="mx-eyebrow" data-film-i18n="eyebrow">Meet MEMRYA</p>
@@ -184,41 +175,12 @@
         <p class="mf-narration" data-film-i18n="narration">English narration: Life happens in conversations. A decision. A promise. Moments find their place. And so do the people who matter. MEMRYA remembers what matters. From the workday, to a day by the sea. Not everything needs remembering. The important things do.</p>
       </details>
     </section>
-
-    <!-- Fold 2 to 4: the connected-memory story -->
     <section class="mx-story" id="story" aria-labelledby="story-title">
       <span id="product" class="mx-anchor-target" aria-hidden="true"></span>
       <div class="shell">
-        <div class="mx-section-head" data-reveal>
-          <p class="mx-eyebrow mx-eyebrow-ink" data-i18n="howitworks.eyebrow">How it works</p>
-          <h2 id="story-title" data-i18n="howitworks.title">From conversation to connected memory in three moves</h2>
-        </div>
-
-        <div class="mx-chapter" data-reveal>
-          <div class="mx-chapter-copy">
-            <p class="mx-step"><b>01</b> <span data-i18n="howitworks.step1Title">Record or import</span></p>
-            <h3 data-i18n="home2.s1Title">Three separate conversations</h3>
-            <p data-i18n="home2.s1Body">A planning call on Monday, a venue confirmation on Wednesday and a quick voice note on Thursday. MEMRYA brings the details together so nothing gets lost between conversations.</p>
-          </div>
-          <div class="mx-merge" aria-hidden="true">
-            <div class="mx-merge-cards">
-              <div class="mx-merge-card"><span class="mx-kind mx-kind-meet">MEET</span><strong>Planning call</strong><small data-i18n="home2.day1">Monday</small></div>
-              <div class="mx-merge-card"><span class="mx-kind mx-kind-call">CALL</span><strong>Venue confirmation</strong><small data-i18n="home2.day2">Wednesday</small></div>
-              <div class="mx-merge-card"><span class="mx-kind mx-kind-note">NOTE</span><strong>Quick Memory</strong><small data-i18n="home2.day3">Thursday</small></div>
-            </div>
-            <svg class="mx-merge-lines" viewBox="0 0 300 70" preserveAspectRatio="none" focusable="false">
-              <path pathLength="1" d="M50 0 C 50 40, 150 30, 150 70"></path>
-              <path pathLength="1" d="M150 0 L 150 70"></path>
-              <path pathLength="1" d="M250 0 C 250 40, 150 30, 150 70"></path>
-            </svg>
-            <div class="mx-merge-core"><span class="mx-core-dot"></span><strong data-i18n="home2.s1Merge">One connected memory</strong></div>
-          </div>
-        </div>
-
         <div class="mx-chapter mx-chapter-graph" data-reveal>
           <div class="mx-chapter-copy">
-            <p class="mx-step"><b>02</b> <span data-i18n="howitworks.step2Title">MEMRYA remembers</span></p>
-            <h3 data-i18n="home2.s2Title">A memory graph that keeps growing</h3>
+            <h2 id="story-title" data-i18n="home2.s2Title">A memory graph that keeps growing</h2>
             <p data-i18n="home2.s2Body">People, decisions, tasks and open questions are linked to each other and to the moment they were said. Each new conversation adds to the same picture instead of starting from zero.</p>
             <ul class="mx-legend">
               <li class="mx-lg-person" data-i18n="home2.kindPerson">Person</li>
@@ -226,6 +188,8 @@
               <li class="mx-lg-task" data-i18n="home2.kindTask">Task</li>
               <li class="mx-lg-question" data-i18n="home2.kindQuestion">Open question</li>
             </ul>
+            <p data-i18n="features.card2Desc">MEMRYA brings together relevant decisions, tasks and evidence from your conversation history. Every answer points back to its source.</p>
+            <a class="mx-btn mx-btn-primary" href="./product.html" data-i18n="home2.ctaProduct">Explore the product</a>
           </div>
           <figure class="mx-graph-wrap">
             <div class="mx-graph" data-mx-graph>
@@ -263,33 +227,8 @@
         </div>
       </div>
     </section>
-
-    <section class="mx-ask" id="ask-demo" aria-labelledby="ask-demo-title">
-      <div class="shell mx-ask-grid">
-        <div class="mx-chapter-copy mx-ask-copy" data-reveal>
-          <p class="mx-step"><b>03</b> <span data-i18n="howitworks.step3Title">Search your memories</span></p>
-          <h2 id="ask-demo-title" data-i18n="features.card2Title">One search across every conversation</h2>
-          <p data-i18n="features.card2Desc">MEMRYA brings together relevant decisions, tasks and evidence from your conversation history. Every answer points back to its source.</p>
-          <a class="mx-btn mx-btn-primary" href="./product.html" data-i18n="home2.ctaProduct">Explore the product</a>
-        </div>
-        <div class="mx-console" data-reveal>
-          <div class="mx-console-top"><span>Memory search</span><span data-i18n="home2.sources3">3 sources</span></div>
-          <p class="mx-console-q" data-i18n="hero.askQuestion">"What is left to organize for the community event?"</p>
-          <p class="mx-console-a" data-i18n="hero.askAnswer">Send the invitations, confirm how many guests are coming and check the supplies.</p>
-          <ol class="mx-source-list">
-            <li><span class="mx-cite-n">1</span><span class="mx-kind mx-kind-meet">MEET</span><div><strong>Planning call</strong><small data-i18n="home2.at1">Monday · 12:08</small><p>The venue is reserved for Saturday afternoon.</p></div></li>
-            <li><span class="mx-cite-n">2</span><span class="mx-kind mx-kind-call">CALL</span><div><strong>Venue confirmation</strong><small data-i18n="home2.at2">Wednesday · 04:31</small><p>Confirm the guest count by Friday so seating can be arranged.</p></div></li>
-            <li><span class="mx-cite-n">3</span><span class="mx-kind mx-kind-note">NOTE</span><div><strong>Quick Memory</strong><small data-i18n="home2.at3">Thursday · 00:46</small><p>Send the invitations and check the supplies before Saturday.</p></div></li>
-          </ol>
-          <p class="mx-console-foot"><i aria-hidden="true"></i><span data-i18n="hero.evidenceLabel">Every claim stays linked to its source conversation</span></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Fold 5: real situations -->
     <section class="mx-uses" id="use-cases" aria-labelledby="uses-title">
       <div class="shell mx-section-head" data-reveal>
-        <p class="mx-eyebrow mx-eyebrow-ink" data-i18n="usecases.eyebrow">Made for real conversations</p>
         <h2 id="uses-title" data-i18n="usecases.title">Meetings are only one kind of memory</h2>
         <p data-i18n="usecases.desc">Use MEMRYA for work calls, family stories, ideas on the move, appointments, interviews, study sessions and anything else you do not want to lose</p>
       </div>
@@ -300,7 +239,6 @@
             <span class="mx-use-tag" data-i18n="usecases.morningTitle">Work conversations</span>
             <h3 data-i18n="usecases.morningDesc">Leave with the decisions, owners and follow-ups intact</h3>
             <p class="mx-use-ask"><b data-i18n="home2.tabAsk">Search</b> <span data-i18n="home2.askWork">Which follow-up is still open?</span></p>
-            <p class="mx-use-kept">Decision captured · owner assigned</p>
           </div>
         </article>
         <article class="mx-use-card">
@@ -309,7 +247,6 @@
             <span class="mx-use-tag" data-i18n="usecases.middayTitle">Important appointments</span>
             <h3 data-i18n="usecases.middayDesc">Remember the instructions, questions and details you wanted to revisit</h3>
             <p class="mx-use-ask"><b data-i18n="home2.tabAsk">Search</b> <span data-i18n="home2.askHealth">What did I want to ask at the next visit?</span></p>
-            <p class="mx-use-kept">3 follow-up points · source linked</p>
           </div>
         </article>
         <article class="mx-use-card">
@@ -318,7 +255,6 @@
             <span class="mx-use-tag" data-i18n="home2.familyTitle">Family and personal</span>
             <h3 data-i18n="home2.familyDesc">Keep the stories, names and promises of the people closest to you</h3>
             <p class="mx-use-ask"><b data-i18n="home2.tabAsk">Search</b> <span data-i18n="home2.askFamily">Which recipe did Grandma promise to share?</span></p>
-            <p class="mx-use-kept">Person linked · memory kept</p>
           </div>
         </article>
       </div>
@@ -328,13 +264,11 @@
     <section class="mx-reach" id="languages" aria-labelledby="reach-title">
       <div class="shell mx-reach-grid">
         <div class="mx-lang" data-reveal>
-          <p class="mx-eyebrow mx-eyebrow-ink" data-i18n="multilingual.eyebrow">Spoken languages</p>
           <h2 id="reach-title" data-i18n="multilingual.title">Conversations in your language</h2>
           <p data-i18n="faq.a3">This website is available in English, Arabic, Spanish, French, German, Portuguese and Italian. Transcription availability and quality vary by language and recording. Check the app for current processing language options.</p>
           <ul class="mx-lang-list"><li>English</li><li lang="ar">العربية</li><li lang="es">Español</li><li lang="fr">Français</li><li lang="de">Deutsch</li><li lang="pt">Português</li><li lang="it">Italiano</li></ul>
         </div>
         <div class="mx-imports" data-reveal>
-          <p class="mx-eyebrow mx-eyebrow-ink" data-i18n="integrations.eyebrow">Import & integrations</p>
           <h3 data-i18n="integrations.title">Bring conversations in from where they already happen</h3>
           <ul class="mx-status-list">
             <li><strong data-i18n="integrations.audioTitle">Existing audio import</strong><span class="mx-state mx-state-live" data-i18n="integrations.audioBadge">Available</span></li>
@@ -347,19 +281,16 @@
         </div>
       </div>
     </section>
-
-    <!-- Fold 6: trust, price and a real next step -->
     <section class="mx-trust" id="trust" aria-labelledby="trust-title">
       <div class="shell">
         <div class="mx-section-head" data-reveal>
-          <p class="mx-eyebrow" data-i18n="trust.eyebrow">Built with trust in mind</p>
-          <h2 id="trust-title" data-i18n="trust.title">Your memory should feel like yours</h2>
+          <h2 id="trust-title" data-i18n="trust.title">Privacy and control</h2>
         </div>
         <ul class="mx-trust-grid">
-          <li data-reveal><span class="mx-trust-icon mx-ti-lock" aria-hidden="true"></span><h3 data-i18n="home2.t1Title">Private to your account</h3><p data-i18n="home2.t1Body">Your memories and recordings are stored privately under your account, with access limited to that account.</p></li>
-          <li data-reveal><span class="mx-trust-icon mx-ti-hand" aria-hidden="true"></span><h3 data-i18n="home2.t2Title">Processed only when you ask</h3><p data-i18n="home2.t2Body">You decide when recording starts. Cloud transcription and analysis begin only after you choose to process a conversation.</p></li>
-          <li data-reveal><span class="mx-trust-icon mx-ti-link" aria-hidden="true"></span><h3 data-i18n="home2.t3Title">Answers you can check</h3><p data-i18n="home2.t3Body">Answers link back to the conversation and the moment they came from, so you can verify them yourself.</p></li>
-          <li data-reveal><span class="mx-trust-icon mx-ti-key" aria-hidden="true"></span><h3 data-i18n="home2.t4Title">Your data, your choice</h3><p data-i18n="home2.t4Body">You can request a copy of your data or delete your account. Service credentials are kept on our servers, never inside the app.</p></li>
+          <li data-reveal><h3 data-i18n="home2.t1Title">Private to your account</h3><p data-i18n="home2.t1Body">Your memories and recordings are stored privately under your account, with access limited to that account.</p></li>
+          <li data-reveal><h3 data-i18n="home2.t2Title">Processed only when you ask</h3><p data-i18n="home2.t2Body">You decide when recording starts. Cloud transcription and analysis begin only after you choose to process a conversation.</p></li>
+          <li data-reveal><h3 data-i18n="home2.t3Title">Answers you can check</h3><p data-i18n="home2.t3Body">Answers link back to the conversation and the moment they came from, so you can verify them yourself.</p></li>
+          <li data-reveal><h3 data-i18n="home2.t4Title">Your data, your choice</h3><p data-i18n="home2.t4Body">You can request a copy of your data or delete your account. Service credentials are kept on our servers, never inside the app.</p></li>
         </ul>
         <a class="mx-text-link mx-text-link-light" href="./security.html" data-i18n="home2.securityLink">How we protect your data</a>
       </div>
@@ -368,7 +299,6 @@
     <section class="mx-price" id="pricing" aria-labelledby="price-title">
       <div class="shell mx-price-grid">
         <div class="mx-price-copy" data-reveal>
-          <p class="mx-eyebrow mx-eyebrow-ink" data-i18n="nav.pricing">Pricing</p>
           <h2 id="price-title" data-i18n="home2.priceTitle">One plan. Extra time when you need it</h2>
           <p data-i18n="home2.priceBody">Recording on your iPhone is intended to stay free. Turning conversations into searchable memory uses processing minutes.</p>
         </div>
@@ -396,16 +326,9 @@
 
     <section class="mx-early" id="contact" aria-labelledby="early-title">
       <div class="shell mx-early-inner" data-reveal>
-        <img src="./assets/icon.png" alt="" width="64" height="64">
         <div class="mx-early-copy">
-          <p class="mx-eyebrow" data-i18n="home2.earlyEyebrow">Contact</p>
           <h2 id="early-title" data-i18n="home2.earlyTitle">Talk to the MEMRYA team</h2>
           <p data-i18n="home2.earlyBody">Send us a short email with the language you usually speak and what you want to remember. We reply personally with current availability for your iPhone.</p>
-          <ol class="mx-early-steps">
-            <li data-i18n="home2.earlyStep1">Tap the button to open a prepared email.</li>
-            <li data-i18n="home2.earlyStep2">Add your language and how you plan to use MEMRYA.</li>
-            <li data-i18n="home2.earlyStep3">We reply personally by email.</li>
-          </ol>
         </div>
         <div class="mx-early-action">
           <a class="mx-btn mx-btn-primary mx-btn-wide" href="mailto:dev@memrya.co?subject=MEMRYA%20question&amp;body=Hi%20MEMRYA%20team%2C%0D%0A%0D%0AI%20would%20like%20to%20learn%20more%20about%20MEMRYA.%0D%0ALanguage%20I%20usually%20speak%3A%20%0D%0AWhat%20I%20want%20to%20remember%3A%20%0D%0A" data-i18n="home2.earlyCta">Email the MEMRYA team</a>
@@ -416,7 +339,7 @@
 
     <section class="faq-section-v2 mx-faq" id="faq">
       <div class="shell faq-grid">
-        <div class="faq-heading"><p data-i18n="faq.eyebrow">FAQ</p><h2 data-i18n="faq.title">Questions worth answering upfront</h2></div>
+        <div class="faq-heading"><h2 data-i18n="faq.title">Common questions</h2></div>
         <div class="faq-list">
           <details><summary data-i18n="faq.q1">What does MEMRYA actually record and store?</summary><p data-i18n="faq.a1">MEMRYA turns a recorded or imported conversation into a transcript, summary, decisions, people and evidence you can search later. Cloud storage is private and access is owner-scoped.</p></details>
           <details><summary data-i18n="faq.q5">How much will MEMRYA cost?</summary><p data-i18n="faq.a5">MEMRYA Pro is listed at US$19.90 per month with 900 processing minutes. Extra minute packs are available. Final local pricing and renewal details are confirmed in the App Store before purchase.</p></details>
@@ -427,7 +350,8 @@
         </div>
       </div>
     </section>
-  </main>  <footer class="footer-deep">
+  </main>
+  <footer class="footer-deep">
     <div class="shell footer-grid">
       <div class="footer-brand-col">
         <a class="brand" href="./index.html#top"><img src="./assets/icon.png" alt=""><span>MEMRYA</span></a>
