@@ -7,8 +7,9 @@
   if (startsAtIntro) root.classList.add('mx-intro-at-top');
   if (startsAtIntro && !reducedMotion.matches) root.classList.add('mx-intro-pending');
 
-  const SPREAD_MS = 460;
-  const MAX_STEP_MS = 34;
+  // Two beats: "Life happens" settles first, then "MEMRYA remembers" focuses in more slowly; the title is formed by ~2.4s.
+  const BEATS = [{ start: 0, spread: 440 }, { start: 620, spread: 820 }];
+  const TOTAL_MS = 620 + 820 + 1000;
   const segmenter = typeof Intl !== 'undefined' && Intl.Segmenter ? new Intl.Segmenter(undefined, { granularity: 'grapheme' }) : null;
   const graphemes = (word) => (segmenter ? [...segmenter.segment(word)].map((part) => part.segment) : Array.from(word));
   let played = false;
@@ -29,8 +30,9 @@
   // Arabic and other cursive scripts reveal by word so letter shaping stays intact.
   function build(title) {
     const byWord = /^(ar|fa|ur|he)\b/.test(root.lang) || root.dir === 'rtl';
-    const units = [];
-    title.querySelectorAll('.mx-intro-line').forEach((line) => {
+    let count = 0;
+    title.querySelectorAll('.mx-intro-line').forEach((line, lineIndex) => {
+      const units = [];
       const text = lineText(line);
       line.dataset.introText = text;
       const visual = element('span', 'mx-intro-glyphs');
@@ -52,16 +54,18 @@
         visual.append(wordNode);
       });
       line.replaceChildren(element('span', 'sr-only', text), visual);
+      const beat = BEATS[Math.min(lineIndex, BEATS.length - 1)];
+      const step = units.length > 1 ? beat.spread / (units.length - 1) : 0;
+      units.forEach((unit, index) => unit.style.setProperty('--mx-intro-delay', `${Math.round(beat.start + index * step)}ms`));
+      count += units.length;
     });
-    const step = units.length > 1 ? Math.min(MAX_STEP_MS, SPREAD_MS / (units.length - 1)) : 0;
-    units.forEach((unit, index) => unit.style.setProperty('--mx-intro-delay', `${Math.round(index * step)}ms`));
-    return units.length;
+    return count;
   }
 
   function finish(title) {
     window.clearTimeout(finishTimer);
     title.classList.remove('is-revealing');
-    root.classList.remove('mx-intro-pending');
+    root.classList.remove('mx-intro-pending', 'mx-intro-playing');
   }
 
   function reveal(title, animate) {
@@ -70,9 +74,10 @@
     build(title);
     root.classList.remove('mx-intro-pending');
     if (!animate) return;
+    root.classList.add('mx-intro-playing');
     void title.offsetWidth;
     title.classList.add('is-revealing');
-    finishTimer = window.setTimeout(() => finish(title), SPREAD_MS + 900);
+    finishTimer = window.setTimeout(() => finish(title), TOTAL_MS + 150);
   }
 
   function introInView(intro) {
@@ -124,7 +129,7 @@
   else start();
 })();
 
-/* #discover story: the four phrases sit together in normal page flow. When the block first enters view they rise in once with a short CSS stagger; nothing is tied to scroll position after that. Scroll is read only to keep the header navy over the dark band. Without JS, without IntersectionObserver or with reduced motion the phrases are simply shown. */
+/* #discover story: the connected-memory diagram sits in normal page flow. When it first enters view it plays its ~1.85s choreography once; nothing is tied to scroll position after that. Threads are redrawn in real pixels so they leave exactly from the phrase anchors. Scroll is read only to keep the header navy over the dark band. Without JS, without IntersectionObserver or with reduced motion the phrases are simply shown. */
 (() => {
   'use strict';
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -140,16 +145,44 @@
     let dark = null;
     let metrics = null;
 
+    const svg = scene.querySelector('.mx-manifesto-svg');
+    const threads = svg ? [...svg.querySelectorAll('.mx-thread')] : [];
+    function drawThreads() {
+      const box = svg.getBoundingClientRect();
+      const w = Math.max(1, Math.round(box.width));
+      const h = Math.max(1, Math.round(box.height));
+      const mid = w / 2;
+      svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+      [w / 6, mid, (w * 5) / 6].forEach((x, i) => {
+        const thread = threads[i];
+        if (!thread) return;
+        thread.removeAttribute('vector-effect');
+        thread.setAttribute('d', i === 1 ? `M${mid} 0L${mid} ${h}` : `M${x} 0C${x} ${h * 0.58} ${mid} ${h * 0.42} ${mid} ${h}`);
+      });
+    }
+    if (svg && threads.length) {
+      drawThreads();
+      if ('ResizeObserver' in window) new ResizeObserver(drawThreads).observe(svg);
+      else window.addEventListener('resize', drawThreads, { passive: true });
+    }
+
+    // Plays once on first entry. Already scrolled past (hash link, fast fling, restored position): settle without playing.
+    const settle = () => scene.classList.add('is-in', 'is-done');
     if (!reducedMotion.matches && 'IntersectionObserver' in window) {
       scene.classList.add('is-armed');
       const observer = new IntersectionObserver((entries) => {
-        if (!entries.some((entry) => entry.isIntersecting)) return;
-        observer.disconnect();
-        scene.classList.add('is-in');
-      }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
+        const entry = entries[entries.length - 1];
+        if (entry.isIntersecting) {
+          observer.disconnect();
+          scene.classList.add('is-in');
+        } else if (entry.boundingClientRect.bottom < 0) {
+          observer.disconnect();
+          settle();
+        }
+      }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
       observer.observe(scene);
     }
-    reducedMotion.addEventListener?.('change', () => scene.classList.add('is-in'));
+    reducedMotion.addEventListener?.('change', settle);
 
     function measure() {
       const y = window.scrollY;
