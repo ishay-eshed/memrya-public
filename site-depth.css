@@ -30,6 +30,7 @@
 .depth-chip{font-size:9px;white-space:nowrap;border-radius:50px;padding:7px 10px;border:1px solid transparent;font-weight:800}
 .depth-chip.available{background:#dff7e7;color:#125332}
 .depth-chip.planned{background:#f8edd2;color:#7b5810}
+.depth-chip.integration{background:#e8e5ff;color:#352c8a;white-space:normal;line-height:1.35;text-align:left}[dir=rtl] .depth-chip.integration{text-align:right}
 .depth-index{background:#171c20;color:#f8f6f2}
 .depth-index-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .depth-index-grid a{color:inherit;text-decoration:none;padding:29px 22px;min-height:136px;display:flex;flex-direction:column;gap:7px;border-left:1px solid #ffffff1a;transition:background .2s}
@@ -213,3 +214,13 @@
 .depth-chip{font-size:11px}
 @media(max-width:680px){.depth-decision .depth-button{white-space:normal;text-align:center}.depth-decision>*{min-width:0}}
 @media(max-width:430px){.depth-chip{white-space:normal}.depth-hero-copy,.depth-hero-copy>*{min-width:0;overflow-wrap:anywhere}}
+
+/* R16 simple integration cards */
+.depth-integrations-compact{min-height:0;grid-template-columns:1fr;padding-top:75px;padding-bottom:18px}
+.depth-integrations-compact .depth-hero-copy{grid-column:1/-1;max-width:760px}
+.depth-integrations-compact .depth-hero-copy>p:not(.depth-eyebrow){max-width:620px}
+.depth-integrations-list{padding-top:38px;padding-bottom:92px}
+.depth-integrations-list .depth-card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.depth-integrations-list .depth-directory-card{min-height:235px}
+.depth-integration-note{font-size:12px;color:#646b73;line-height:1.7;margin:22px 0 0}
+@media(max-width:800px){.depth-integrations-compact{padding-top:46px;padding-bottom:8px}.depth-integrations-list .depth-card-grid{grid-template-columns:1fr}.depth-integrations-list{padding-top:24px;padding-bottom:60px}.depth-integrations-list .depth-directory-card{min-height:165px}}

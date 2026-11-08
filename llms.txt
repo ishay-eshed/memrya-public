@@ -26,9 +26,9 @@
 ## Availability
 
 - Existing audio import: available.
-- Zoom cloud recording import: in development, not yet available.
-- Google Meet: planned next. Microsoft Teams: planned later.
-- Google Calendar: a user-reviewed calendar draft is in testing. This is not two-way calendar sync.
+- Zoom and Google Meet: users can import existing meeting recordings as supported audio files. Direct account connections are limited by availability; Zoom LIVE capture is not offered.
+- Google Calendar: users can review a proposed calendar event draft and save it themselves; direct account authorization is restricted to a pilot pending Google permission verification. No two-way calendar sync.
+- Microsoft Teams direct integration is not currently offered.
 - PDF export and sharing: in testing on iPhone, not yet confirmed as generally available.
 - Voice Identity: still being tested, not generally available; optional and consent-based when offered.
 - MEMRYA for iPhone is not yet generally available in the App Store. There is no waitlist; questions can be sent to dev@memrya.co.

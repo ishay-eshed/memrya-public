@@ -27,7 +27,7 @@
   <link rel="canonical" href="https://memrya.co/privacy.html">
   <link rel="icon" href="./assets/icon.png">
   <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="./site-depth.css">
+  <link rel="stylesheet" href="./site-depth.css?v=r16">
   <title>Privacy | MEMRYA</title>
 </head>
 <body>
@@ -66,7 +66,7 @@
       </div>
       <div class="utility-grid">
         <aside class="utility-aside reveal">
-          <p>Last updated: October 2026.</p>
+          <p data-i18n="legal.updated">Last updated: November 8, 2026.</p>
           <p>Contact: <a href="mailto:dev@memrya.co">dev@memrya.co</a></p>
         </aside>
         <div class="utility-content reveal">
@@ -76,7 +76,7 @@
           <p>MEMRYA's core flow is recording or importing a conversation, then uploading, transcribing and analyzing it to produce a summary, evidence and grounded answers you can search later. Audio you record or import is the basis for everything else the product creates.</p>
 
           <h2>Where processing happens</h2>
-          <p>Audio is recorded on your device. Cloud processing can start when you choose to process a conversation, enable automatic processing for recordings in Settings, or allow automatic processing for voice Quick Memories. Review these permissions before capturing sensitive conversations.</p>
+          <p data-i18n="legal.cloud">Audio is recorded on your device. MEMRYA asks for cloud AI processing consent during setup. With that consent, saved recordings and voice Quick Memories may be processed automatically.</p>
 
           <h2>Providers that receive your data</h2>
           <p>MEMRYA uses Supabase for account services and cloud storage. Account-linked recordings, transcripts, memories and related records can be stored there.</p>
@@ -84,8 +84,8 @@
           <p>OpenAI receives transcript text and related details for analysis. Where AI-assisted memory search is available and you allow it, OpenAI can also receive your search and relevant conversation excerpts. Searches answered entirely on your phone do not send data to OpenAI.</p>
           <p>RevenueCat receives an account-related user ID and purchase information to validate purchases, manage subscription access and provide subscription analytics.</p>
 
-          <h2>Your processing choices</h2>
-          <p>Automatic processing for regular recordings, voice Quick Memories and AI-assisted memory search have separate permissions. You can withdraw them in Settings. Withdrawal stops future use under that permission; it does not delete data already sent or stored. Use the account-deletion controls or contact support about existing data.</p>
+          <h2 data-i18n="legal.servicesTitle">Connected services</h2><p data-i18n="legal.services">When you authorize a supported Zoom or Google connection, MEMRYA may receive recordings, transcripts or calendar event information under the permissions you approve. A Google Calendar draft can be saved without direct calendar access. You can revoke provider permissions in the provider account.</p><h2>Your processing choices</h2>
+          <p data-i18n="legal.withdraw">Cloud AI processing requires your consent. Without it, core processing is unavailable. To stop future processing or request deletion, contact support or use available account controls. This does not automatically erase information already sent to providers.</p>
 
           <h2>Storage and access</h2>
           <p>Recordings, transcripts and related account data are stored in private cloud storage. Text Quick Memories and organizational data can also sync to your MEMRYA account. Account permissions limit access to the content associated with your account.</p>
@@ -130,9 +130,9 @@
     </div>
     <div class="shell footer-bottom"><p data-i18n="footer.copyright">© 2026 MEMRYA.</p><label class="locale-switch footer-locale"><span class="sr-only" data-i18n="langswitch.label">Language</span><select class="locale-switch-control" aria-label="Language"></select></label></div>
   </footer>
-  <script src="./i18n.js" defer></script>
+  <script src="./i18n.js?v=r16" defer></script>
   <script src="./script.js" defer></script>
-  <script src="./site-depth.js" defer></script>
+  <script src="./site-depth.js?v=r16" defer></script>
   <script src="./privacy-locale.js" defer></script>
 </body>
 </html>

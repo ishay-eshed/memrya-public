@@ -27,7 +27,7 @@
   <link rel="canonical" href="https://memrya.co/security.html">
   <link rel="icon" href="./assets/icon.png">
   <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="./site-depth.css">
+  <link rel="stylesheet" href="./site-depth.css?v=r16">
   <title>Security | MEMRYA</title>
 </head>
 <body>
@@ -68,7 +68,7 @@
         <div class="trust-overview-head"><p class="depth-eyebrow">SECURITY & PRIVACY CENTER</p><h2 id="trust-center-heading">Understand how we protect your data</h2><p>Security deserves more than a row of logos. These sections explain what MEMRYA is designed to protect, what it does not claim, and where you can read more. This is not a certification or external audit report.</p></div>
         <div class="trust-topic-grid">
           <article><b>01 / DATA ACCESS</b><h3>Account-scoped memory</h3><p>Your cloud data is tied to your account, and each account's data is kept separate.</p><a href="./privacy.html">Privacy details →</a></article>
-          <article><b>02 / PROVIDERS</b><h3>Cloud processing controls</h3><p>You can start cloud transcription and analysis for a conversation or enable automatic processing in Settings. When enabled, it can start after you stop recording. Review this setting before recording sensitive conversations.</p><a href="./privacy.html">Processing details →</a></article>
+          <article><b>02 / PROVIDERS</b><h3>Cloud processing controls</h3><p data-i18n="legal.cloud">Audio is recorded on your device. MEMRYA asks for cloud AI processing consent during setup. With that consent, saved recordings and voice Quick Memories may be processed automatically.</p><a href="./privacy.html">Processing details →</a></article>
           <article><b>03 / SECRETS</b><h3>Server-side provider credentials</h3><p>Processing-provider credentials stay on the server, not inside the iOS client. This does not mean the service is end-to-end encrypted.</p><a href="#encryption-detail">What we do not claim →</a></article>
           <article><b>04 / CONTROL</b><h3>Account and data requests</h3><p>Use the account controls in supported app versions to export data or request deletion. Email support if you cannot access those controls.</p><a href="./delete-account.html">Deletion and export →</a></article>
         </div>
@@ -99,7 +99,7 @@
           <p>We do not claim end-to-end encryption. Security is built on server-side secret handling and private, owner-scoped storage as described above, not on an end-to-end encryption guarantee.</p>
 
           <h2>Processing providers</h2>
-          <p>Audio and transcripts are sent to processing providers when you start cloud processing or enable automatic processing. You can turn automatic processing off in Settings.</p>
+          <p data-i18n="legal.providers">Audio and transcript processing uses the providers listed on our Privacy page after you consent during setup. To request deletion, use available account controls or contact support.</p>
 
           <h2>Website security</h2>
           <p>This website itself enforces a strict Content-Security-Policy, uses no analytics, cookies, trackers or third-party JavaScript, and exposes no public API keys.</p>
@@ -122,9 +122,9 @@
     </div>
     <div class="shell footer-bottom"><p data-i18n="footer.copyright">© 2026 MEMRYA</p><label class="locale-switch footer-locale"><span class="sr-only" data-i18n="langswitch.label">Language</span><select class="locale-switch-control" aria-label="Language"></select></label></div>
   </footer>
-  <script src="./i18n.js" defer></script>
+  <script src="./i18n.js?v=r16" defer></script>
   <script src="./script.js" defer></script>
-  <script src="./site-depth.js" defer></script>
+  <script src="./site-depth.js?v=r16" defer></script>
   <script src="./security-locale.js" defer></script>
 </body>
 </html>
