@@ -124,37 +124,36 @@
   else start();
 })();
 
-/* #discover story: scroll position alone decides which phrase holds the stage, so scrolling back reverses it. Each phrase rises a few pixels and settles as it fades in, then drifts up as the next one arrives. Without JS or with reduced motion the four phrases are simply shown. */
+/* #discover story: the four phrases scroll in normal page flow. Each frame, every phrase is nudged by its own distance from the viewport centre: fully opaque and settled near the centre, a little lower and softer below it, a little higher above it. It never reads or sets the scroll position, and a phrase never drops below MIN_OPACITY, so a fast flick past the story still shows it. Without JS or with reduced motion the four phrases are simply shown. */
 (() => {
   'use strict';
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  // Per phrase, in section progress: fade-in start, fully in, fade-out start, fully out.
-  const WINDOWS = [[-0.12, 0.05, 0.3, 0.38], [0.33, 0.41, 0.5, 0.57], [0.53, 0.6, 0.7, 0.76], [0.73, 0.82, 2, 2]];
-  const RISE_PX = 16;
-  const DRIFT_PX = 12;
+  const SHIFT_PX = 16;
+  const MIN_OPACITY = 0.32;
+  const CALM = 0.2; // share of half the viewport around the centre where a phrase sits fully settled
   const clamp = (value) => Math.min(1, Math.max(0, value));
-  const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+  const easeIn = (t) => t * t;
 
   function start() {
     const scene = document.querySelector('[data-mx-manifesto]');
-    const stage = scene?.querySelector('.mx-manifesto-stage');
-    if (!scene || !stage) return;
+    if (!scene) return;
     const darkBand = scene.closest('.mx-discover') || scene;
     const lines = [...scene.querySelectorAll('.mx-manifesto-line')];
     const arrow = document.querySelector('.mx-intro-next');
     const root = document.documentElement;
     let frame = 0;
     let dark = null;
-    let last = null;
     let metrics = null;
+    let kinetic = false;
 
-    // Layout is read only after resize, load or locale change; scrolling itself reads scrollY alone.
+    // Layout is read only after resize, load or locale change (with the nudges removed); scrolling itself reads scrollY alone.
     function measure() {
-      const box = scene.getBoundingClientRect();
+      if (kinetic) lines.forEach((line) => { line.style.transform = ''; });
+      const y = window.scrollY;
       metrics = {
-        top: box.top + window.scrollY,
-        bottom: darkBand.getBoundingClientRect().bottom + window.scrollY,
-        hold: Math.max(1, box.height - stage.offsetHeight),
+        top: scene.getBoundingClientRect().top + y,
+        bottom: darkBand.getBoundingClientRect().bottom + y,
+        centres: lines.map((line) => { const box = line.getBoundingClientRect(); return box.top + y + box.height / 2; }),
         header: parseFloat(getComputedStyle(scene).getPropertyValue('--mx-header-h')) || 0,
         vh: window.innerHeight,
       };
@@ -168,42 +167,39 @@
       const edge = y + metrics.header;
       const overStory = edge > metrics.top + 1 && edge < metrics.bottom - 1;
       if (overStory !== dark) { dark = overStory; root.classList.toggle('mx-story-active', overStory); }
-      if (!scene.classList.contains('is-kinetic')) return;
+      if (!kinetic) return;
       if (arrow) {
         const fade = clamp(1 - y / (metrics.vh * 0.28));
         arrow.style.opacity = fade < 1 ? fade.toFixed(3) : '';
         arrow.style.visibility = fade <= 0.01 ? 'hidden' : '';
       }
-      const progress = (y + metrics.header - metrics.top) / metrics.hold;
-      if (last !== null && Math.abs(progress - last) < 0.0004) return;
-      if (last !== null && (progress < -0.6 || progress > 1.4) && (last < -0.6 || last > 1.4)) return;
-      last = progress;
+      const half = metrics.vh / 2;
+      const centre = y + metrics.header / 2 + half;
       lines.forEach((line, index) => {
-        const [a, b, c, d] = WINDOWS[index];
-        const enter = easeOut(clamp((progress - a) / (b - a)));
-        const exit = clamp((progress - c) / (d - c));
-        const offset = RISE_PX * (1 - enter) - DRIFT_PX * exit * exit;
-        line.style.opacity = (enter * (1 - exit)).toFixed(3);
-        line.style.transform = 'translate3d(0,' + offset.toFixed(2) + 'px,0) scale(' + (0.98 + 0.02 * enter).toFixed(4) + ')';
+        const distance = (metrics.centres[index] - centre) / half;
+        const away = easeIn(clamp((Math.abs(distance) - CALM) / (1 - CALM)));
+        const offset = Math.sign(distance) * SHIFT_PX * away;
+        line.style.opacity = away > 0 ? (1 - (1 - MIN_OPACITY) * away).toFixed(3) : '';
+        line.style.transform = away > 0 ? 'translate3d(0,' + offset.toFixed(2) + 'px,0)' : '';
       });
     }
     const request = () => { if (!frame) frame = requestAnimationFrame(render); };
-    const refresh = () => { metrics = null; last = null; request(); };
+    const refresh = () => { metrics = null; request(); };
 
     function setMode() {
-      const kinetic = !reducedMotion.matches;
+      kinetic = !reducedMotion.matches;
       scene.classList.toggle('is-kinetic', kinetic);
-      metrics = null;
-      last = null;
-      render();
-      if (kinetic) return;
-      lines.forEach((line) => { line.style.transform = ''; line.style.opacity = ''; });
-      if (arrow) { arrow.style.opacity = ''; arrow.style.visibility = ''; }
+      if (!kinetic) {
+        lines.forEach((line) => { line.style.transform = ''; line.style.opacity = ''; });
+        if (arrow) { arrow.style.opacity = ''; arrow.style.visibility = ''; }
+      }
+      refresh();
     }
     window.addEventListener('scroll', request, { passive: true });
     window.addEventListener('resize', refresh, { passive: true });
     window.addEventListener('load', refresh);
     document.addEventListener('memrya:locale-changed', refresh);
+    document.fonts?.ready.then(refresh);
     reducedMotion.addEventListener?.('change', setMode);
     setMode();
   }

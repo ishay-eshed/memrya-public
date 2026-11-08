@@ -427,24 +427,21 @@ html.mx-intro-at-top .mx-home .site-header:focus-within .nav-links a:after{backg
 html.mx-intro-pending .mx-intro-title{opacity:1}
 }
 
-/* #discover story: four phrases share one centered position inside a sticky stage; JS scrubs each phrase in and out from scroll position. Without JS or with reduced motion all four stay readable, stacked. */
+/* #discover story: the four phrases sit one after another in ordinary page flow, so the page always scrolls at the thumb's pace. JS only nudges each phrase (a few px and some opacity) by its distance from the viewport centre; without JS or with reduced motion they are simply shown. */
 .mx-manifesto-scene{--mx-header-h:77px;position:relative}
-.mx-manifesto-stage{display:grid;place-items:center;padding:clamp(64px,12vh,128px) 0 clamp(56px,10vh,112px)}
-.mx-manifesto{margin:0;font-family:var(--display);font-size:clamp(46px,6.6vw,5.5rem);font-weight:500;line-height:1.08;letter-spacing:-.032em;text-align:center;font-kerning:normal}
-.mx-manifesto-line{display:block;text-wrap:balance}
+.mx-manifesto-stage{padding:clamp(56px,10vh,112px) 0 clamp(40px,8vh,96px)}
+.mx-manifesto{display:flex;flex-direction:column;align-items:center;gap:clamp(64px,11vh,120px);margin:0;font-family:var(--display);font-size:clamp(46px,6.6vw,5.5rem);font-weight:500;line-height:1.08;letter-spacing:-.032em;text-align:center;font-kerning:normal}
+.mx-manifesto-line{display:block;max-width:11em;text-wrap:balance}
 .mx-manifesto-line:nth-child(1){color:#b1e9d0}
 .mx-manifesto-line:nth-child(2){color:#ffc2a8}
 .mx-manifesto-line:nth-child(3){color:#adcfff}
 .mx-manifesto-line-whole{margin-top:.22em;color:#fdfbf7;font-size:1.09em;font-weight:650;letter-spacing:-.036em}
 [dir="rtl"] .mx-manifesto,[dir="rtl"] .mx-manifesto-line-whole{letter-spacing:0;line-height:1.3}
-.mx-manifesto-scene.is-kinetic{height:270vh;height:270svh}
-.mx-manifesto-scene.is-kinetic .mx-manifesto-stage{position:sticky;top:var(--mx-header-h);height:calc(100vh - var(--mx-header-h));height:calc(100svh - var(--mx-header-h));padding:0;box-sizing:border-box;overflow:hidden}
-.mx-manifesto-scene.is-kinetic .mx-manifesto{display:grid;width:100%;place-items:center}
-.mx-manifesto-scene.is-kinetic .mx-manifesto-line{grid-area:1/1;margin:0;max-width:11em;opacity:0;will-change:transform,opacity;backface-visibility:hidden}
+.mx-manifesto-scene.is-kinetic .mx-manifesto-line{will-change:transform,opacity}
 @media(max-width:620px){
 .mx-manifesto-scene{--mx-header-h:69px}
-.mx-manifesto{font-size:clamp(40px,12.4vw,58px);line-height:1.08}
-.mx-manifesto-scene.is-kinetic .mx-manifesto-line{max-width:8.2em}
+.mx-manifesto{gap:22vh;gap:22svh;font-size:clamp(40px,12.4vw,58px);line-height:1.08}
+.mx-manifesto-line{max-width:8.2em}
 }
 .mx-home .mx-discover{overflow:visible}
 @supports(overflow:clip){.mx-home .mx-discover{overflow:clip}}
@@ -464,6 +461,6 @@ html.mx-story-active .mx-home .nav-links{color:#d9d6f0}
 html.mx-story-active .mx-home .nav-links a:after{background:#d9d6f0}
 }
 .mx-home .mx-discover .mx-manifesto-scene+.mx-hero-grid{padding-top:56px}
-/* R11 editorial no-CTA during cinematic story. Keep focus access for keyboard and open menu. */
+/* Editorial no-CTA while the dark story band is under the header. Keep focus access for keyboard and open menu. */
 html.mx-story-active .mx-home .nav>.nav-actions .nav-cta{opacity:0;pointer-events:none}
 html.mx-story-active .mx-home .site-header:focus-within .nav>.nav-actions .nav-cta{opacity:1;pointer-events:auto}
