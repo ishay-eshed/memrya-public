@@ -169,7 +169,6 @@
   const text = (key) => {
     const table = COPY[document.documentElement.lang] || COPY.en;
     const value = table[key] ?? COPY.en[key];
-    if (phone.matches) return value;
     if (key === 'lede') return WIDE_LEDE[document.documentElement.lang] || WIDE_LEDE.en;
     if (key === 'meta') return value.replace('0:32', '1:05');
     if (key === 'videoLabel') return value.replace(/\b32\b/g, '65');
@@ -192,33 +191,28 @@
       if (value) node.textContent = value;
     });
     video.setAttribute('aria-label', text('videoLabel'));
+    const introWatch = document.querySelector('.mx-intro-film-link');
+    if (introWatch) introWatch.setAttribute('aria-label', text('watch'));
     const wideDisclaimer = document.querySelector('[data-film-wide-disclaimer]');
     if (wideDisclaimer) wideDisclaimer.textContent = WIDE_DISCLAIMER[document.documentElement.lang] || WIDE_DISCLAIMER.en;
-    document.querySelectorAll('[data-film-watch] small').forEach((el) => { el.textContent = phone.matches ? '0:32' : '1:05'; });
+    document.querySelectorAll('[data-film-watch] small').forEach((el) => { el.textContent = '1:05'; });
     play.setAttribute('aria-label', text(player.classList.contains('is-ended') ? 'replay' : 'play') + (document.documentElement.lang === 'ar' ? '، ' : ', ') + text('meta'));
     syncToggle();
   }
 
   let started = false;
   let primed = false;
-  /* Phones get the dedicated 4:5 cut, chosen before anything loads. */
+  /* Same approved 16:9 V10C film on every device. No cropped or rejected portrait. */
   function chooseCut() {
     if (started || primed) return;
-    const portrait = phone.matches;
-    player.classList.toggle('is-portrait', portrait);
-    video.poster = portrait ? video.dataset.posterPortrait : video.dataset.posterLandscape;
-    video.setAttribute('width', portrait ? '1080' : '1920');
-    video.setAttribute('height', portrait ? '1350' : '1080');
+    player.classList.remove('is-portrait');
+    video.poster = video.dataset.posterLandscape;
+    video.setAttribute('width', '854');
+    video.setAttribute('height', '480');
   }
   function prepareSources() {
     if (primed) return;
     primed = true;
-    if (player.classList.contains('is-portrait')) {
-      video.querySelectorAll('source[data-portrait]').forEach((source) => { source.src = source.dataset.portrait; });
-      video.querySelectorAll('track[data-portrait]').forEach((track) => { track.src = track.dataset.portrait; });
-    }
-    /* Reselect the source while preload is still none (fetches nothing), then allow metadata,
-       so a phone never starts on the 16:9 file that was selected while the page parsed. */
     video.load();
     video.preload = 'metadata';
   }
