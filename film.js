@@ -191,8 +191,6 @@
       if (value) node.textContent = value;
     });
     video.setAttribute('aria-label', text('videoLabel'));
-    const introWatch = document.querySelector('.mx-intro-film-link');
-    if (introWatch) introWatch.setAttribute('aria-label', text('watch'));
     const wideDisclaimer = document.querySelector('[data-film-wide-disclaimer]');
     if (wideDisclaimer) wideDisclaimer.textContent = WIDE_DISCLAIMER[document.documentElement.lang] || WIDE_DISCLAIMER.en;
     document.querySelectorAll('[data-film-watch] small').forEach((el) => { el.textContent = '1:05'; });
