@@ -75,6 +75,9 @@
 .mx-home .mf-film .mf-video{aspect-ratio:16/9;object-fit:contain}
 .mx-home .mf-film .mf-play{z-index:3;inset-inline-start:auto;left:50%;right:auto;top:50%;bottom:auto;transform:translate(-50%,-50%);display:flex;flex-direction:column;gap:10px;padding:16px 22px;border:1px solid #ffffff88;border-radius:20px;min-width:180px;align-items:center;text-align:center;background:#111423e8;color:#fff;box-shadow:0 12px 40px #05061299}
 .mx-home .mf-film .mf-play:hover{transform:translate(-50%,-50%) scale(1.035);background:#15192bef}
+/* The central CTA must disappear when playback starts; bring it back only to replay after the film ends. */
+.mx-home .mf-film .mf-player.is-started:not(.is-ended) .mf-play{display:none}
+.mx-home .mf-film .mf-player.is-ended .mf-play{display:flex}
 .mx-home .mf-film .mf-play-icon{width:60px;height:60px;margin:auto;background:#fff;color:#15162b}
 .mx-home .mf-film .mf-play-icon::before{border-width:9px 0 9px 14px}
 .mx-home .mf-film .mf-play-text{align-items:center;text-align:center;gap:4px}
