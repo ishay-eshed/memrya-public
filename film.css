@@ -64,3 +64,8 @@
 @media(prefers-reduced-motion:reduce){
   .mf-play,.mf-play:hover{transition:none;transform:none}
 }
+
+/* Site cut mapping: approved V10C landscape; existing V4 portrait kept pending mobile film approval. */
+[data-film-portrait-only]{display:none!important}
+[data-film-wide-only]{display:block}
+@media(max-width:680px){[data-film-portrait-only]{display:block!important}.mf-cast[data-film-portrait-only]{display:flex!important}[data-film-wide-only]{display:none!important}}

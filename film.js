@@ -146,9 +146,34 @@
       narration: 'التعليق الصوتي بالإنجليزية (مترجم): الحياة تحدث في المحادثات. قرار. ووعد. كل لحظة تجد مكانها. وكذلك الأشخاص المهمون. MEMRYA يتذكر ما يهم. من يوم العمل إلى يوم على البحر. ليس كل شيء يستحق التذكّر. لكن الأمور المهمة تستحق.',
     },
   };
+  const WIDE_LEDE = {
+  "en": "A workday. A conversation at home. A call on the street. The moments worth remembering, brought together by MEMRYA.",
+  "es": "Un día de trabajo. Una conversación en casa. Una llamada en la calle. MEMRYA reúne lo que merece ser recordado.",
+  "fr": "Une journée de travail. Une conversation à la maison. Un appel dans la rue. MEMRYA réunit ce qui mérite d’être retenu.",
+  "de": "Ein Arbeitstag. Ein Gespräch zu Hause. Ein Anruf unterwegs. MEMRYA hält fest, was in Erinnerung bleiben soll.",
+  "pt": "Um dia de trabalho. Uma conversa em casa. Uma chamada na rua. A MEMRYA reúne o que vale a pena lembrar.",
+  "it": "Una giornata di lavoro. Una conversazione a casa. Una chiamata per strada. MEMRYA raccoglie ciò che conta ricordare.",
+  "ar": "يوم عمل، وحديث في المنزل، ومكالمة في الطريق. تجمع MEMRYA التفاصيل التي تستحق التذكر.",
+  "he": "יום עבודה, שיחה בבית, שיחת טלפון בדרך. MEMRYA מחברת את הפרטים שכדאי לזכור."
+};
+  const WIDE_DISCLAIMER = {
+  "en": "Dramatized film. Some scenes and product screens are illustrative.",
+  "es": "Película dramatizada. Algunas escenas y pantallas del producto son ilustrativas.",
+  "fr": "Film mis en scène. Certaines scènes et interfaces sont illustratives.",
+  "de": "Inszenierter Film. Einige Szenen und Produktansichten dienen der Veranschaulichung.",
+  "pt": "Filme encenado. Algumas cenas e telas do produto são ilustrativas.",
+  "it": "Filmato sceneggiato. Alcune scene e schermate del prodotto sono illustrative.",
+  "ar": "فيلم تمثيلي. بعض المشاهد وشاشات المنتج توضيحية.",
+  "he": "סרטון מבוים. חלק מהסצנות ומסכי האפליקציה להמחשה בלבד."
+};
   const text = (key) => {
     const table = COPY[document.documentElement.lang] || COPY.en;
-    return table[key] ?? COPY.en[key];
+    const value = table[key] ?? COPY.en[key];
+    if (phone.matches) return value;
+    if (key === 'lede') return WIDE_LEDE[document.documentElement.lang] || WIDE_LEDE.en;
+    if (key === 'meta') return value.replace('0:32', '1:05');
+    if (key === 'videoLabel') return value.replace(/\b32\b/g, '65');
+    return value;
   };
   function syncToggle() {
     if (!toggle) return;
@@ -167,6 +192,9 @@
       if (value) node.textContent = value;
     });
     video.setAttribute('aria-label', text('videoLabel'));
+    const wideDisclaimer = document.querySelector('[data-film-wide-disclaimer]');
+    if (wideDisclaimer) wideDisclaimer.textContent = WIDE_DISCLAIMER[document.documentElement.lang] || WIDE_DISCLAIMER.en;
+    document.querySelectorAll('[data-film-watch] small').forEach((el) => { el.textContent = phone.matches ? '0:32' : '1:05'; });
     play.setAttribute('aria-label', text(player.classList.contains('is-ended') ? 'replay' : 'play') + (document.documentElement.lang === 'ar' ? '، ' : ', ') + text('meta'));
     syncToggle();
   }
@@ -187,6 +215,7 @@
     primed = true;
     if (player.classList.contains('is-portrait')) {
       video.querySelectorAll('source[data-portrait]').forEach((source) => { source.src = source.dataset.portrait; });
+      video.querySelectorAll('track[data-portrait]').forEach((track) => { track.src = track.dataset.portrait; });
     }
     /* Reselect the source while preload is still none (fetches nothing), then allow metadata,
        so a phone never starts on the 16:9 file that was selected while the page parsed. */
