@@ -213,3 +213,5 @@
 .depth-chip{font-size:11px}
 @media(max-width:680px){.depth-decision .depth-button{white-space:normal;text-align:center}.depth-decision>*{min-width:0}}
 @media(max-width:430px){.depth-chip{white-space:normal}.depth-hero-copy,.depth-hero-copy>*{min-width:0;overflow-wrap:anywhere}}
+
+.offer-featured .offer-tiers{margin:26px 0 8px}.offer-featured .offer-tiers strong{color:#191d25}.offer-featured .offer-tiers small{color:#58616b}

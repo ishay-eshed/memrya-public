@@ -21,7 +21,7 @@
 
 - Recording on device is intended to remain free.
 - Cloud processing consumes processing minutes.
-- MEMRYA Pro launch catalog: US$19.90 per month including 900 processing minutes (15 hours). Extra minute packs: 300 min US$8.99, 600 min US$15.99, 1,800 min US$44.99, 5,400 min US$129.99. The App Store confirms final local price, currency and renewal terms before purchase.
+- Launch pricing (MEMRYA for iPhone is not yet in the App Store). Four monthly plans in US dollars: Starter 120 processing minutes US$4.99, Essential 300 minutes US$9.99, Plus 600 minutes US$16.99, Pro 900 minutes (15 hours) US$19.90. Monthly included minutes reset each paid billing cycle and do not roll over. Paid subscribers will be able to buy three one-time extra minute add-ons: 120 minutes US$4.99, 300 minutes US$9.99, 600 minutes US$16.99. Add-on minutes do not expire. There is no 900-minute add-on and no annual plan. The store confirms final local price, currency and renewal terms before any purchase.
 
 ## Availability
 
